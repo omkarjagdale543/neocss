@@ -1,0 +1,182 @@
+/**
+ * NeoCSS Border Design Tokens
+ * 
+ * YAML Metadata:
+ * prompt: Design token system development
+ * purpose: Define border widths, styles, and radius values
+ * created: 2025-07-08
+ * features: border scale, radius scale, component borders
+ */
+
+:root {
+  /* ==========================================================================
+     BORDER WIDTHS
+     ========================================================================== */
+  
+  --neo-border-width-0: 0;
+  --neo-border-width-1: 1px;
+  --neo-border-width-2: 2px;
+  --neo-border-width-4: 4px;
+  --neo-border-width-8: 8px;
+
+  /* Semantic aliases */
+  --neo-border-width-thin: var(--neo-border-width-1);
+  --neo-border-width-medium: var(--neo-border-width-2);
+  --neo-border-width-thick: var(--neo-border-width-4);
+  --neo-border-width-base: var(--neo-border-width-1);
+
+  /* ==========================================================================
+     BORDER STYLES
+     ========================================================================== */
+  
+  --neo-border-style-none: none;
+  --neo-border-style-solid: solid;
+  --neo-border-style-dashed: dashed;
+  --neo-border-style-dotted: dotted;
+  --neo-border-style-double: double;
+  --neo-border-style-groove: groove;
+  --neo-border-style-ridge: ridge;
+  --neo-border-style-inset: inset;
+  --neo-border-style-outset: outset;
+
+  /* Default border style */
+  --neo-border-style-base: var(--neo-border-style-solid);
+
+  /* ==========================================================================
+     BORDER RADIUS
+     ========================================================================== */
+  
+  /* Border radius scale */
+  --neo-border-radius-none: 0;
+  --neo-border-radius-sm: 0.125rem;    /* 2px */
+  --neo-border-radius-md: 0.25rem;     /* 4px */
+  --neo-border-radius-lg: 0.375rem;    /* 6px */
+  --neo-border-radius-xl: 0.5rem;      /* 8px */
+  --neo-border-radius-2xl: 0.75rem;    /* 12px */
+  --neo-border-radius-3xl: 1rem;       /* 16px */
+  --neo-border-radius-full: 9999px;    /* Fully rounded */
+
+  /* Semantic aliases */
+  --neo-border-radius-base: var(--neo-border-radius-md);
+  --neo-border-radius-rounded: var(--neo-border-radius-lg);
+  --neo-border-radius-pill: var(--neo-border-radius-full);
+
+  /* ==========================================================================
+     COMPONENT BORDERS
+     ========================================================================== */
+  
+  /* Button borders */
+  --neo-border-button-width: var(--neo-border-width-1);
+  --neo-border-button-style: var(--neo-border-style-solid);
+  --neo-border-button-radius: var(--neo-border-radius-md);
+  --neo-border-button-radius-sm: var(--neo-border-radius-sm);
+  --neo-border-button-radius-lg: var(--neo-border-radius-lg);
+
+  /* Input borders */
+  --neo-border-input-width: var(--neo-border-width-1);
+  --neo-border-input-style: var(--neo-border-style-solid);
+  --neo-border-input-radius: var(--neo-border-radius-md);
+  --neo-border-input-focus-width: var(--neo-border-width-2);
+
+  /* Card borders */
+  --neo-border-card-width: var(--neo-border-width-1);
+  --neo-border-card-style: var(--neo-border-style-solid);
+  --neo-border-card-radius: var(--neo-border-radius-lg);
+
+  /* Modal borders */
+  --neo-border-modal-width: var(--neo-border-width-0);
+  --neo-border-modal-style: var(--neo-border-style-none);
+  --neo-border-modal-radius: var(--neo-border-radius-xl);
+
+  /* Table borders */
+  --neo-border-table-width: var(--neo-border-width-1);
+  --neo-border-table-style: var(--neo-border-style-solid);
+  --neo-border-table-radius: var(--neo-border-radius-md);
+
+  /* Alert borders */
+  --neo-border-alert-width: var(--neo-border-width-1);
+  --neo-border-alert-style: var(--neo-border-style-solid);
+  --neo-border-alert-radius: var(--neo-border-radius-md);
+  --neo-border-alert-left-width: var(--neo-border-width-4);
+
+  /* Badge borders */
+  --neo-border-badge-width: var(--neo-border-width-0);
+  --neo-border-badge-style: var(--neo-border-style-none);
+  --neo-border-badge-radius: var(--neo-border-radius-full);
+
+  /* Navigation borders */
+  --neo-border-nav-width: var(--neo-border-width-1);
+  --neo-border-nav-style: var(--neo-border-style-solid);
+  --neo-border-nav-radius: var(--neo-border-radius-none);
+
+  /* Dropdown borders */
+  --neo-border-dropdown-width: var(--neo-border-width-1);
+  --neo-border-dropdown-style: var(--neo-border-style-solid);
+  --neo-border-dropdown-radius: var(--neo-border-radius-lg);
+
+  /* Tooltip borders */
+  --neo-border-tooltip-width: var(--neo-border-width-0);
+  --neo-border-tooltip-style: var(--neo-border-style-none);
+  --neo-border-tooltip-radius: var(--neo-border-radius-md);
+
+  /* ==========================================================================
+     BORDER COMBINATIONS
+     ========================================================================== */
+  
+  /* Complete border definitions for common use cases */
+  --neo-border-base: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-border-primary);
+  --neo-border-secondary: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-border-secondary);
+  --neo-border-focus: var(--neo-border-width-2) var(--neo-border-style-base) var(--neo-color-border-focus);
+
+  /* State borders */
+  --neo-border-success: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-success-500);
+  --neo-border-warning: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-warning-500);
+  --neo-border-error: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-error-500);
+  --neo-border-info: var(--neo-border-width-base) var(--neo-border-style-base) var(--neo-color-info-500);
+
+  /* ==========================================================================
+     OUTLINE SYSTEM
+     ========================================================================== */
+  
+  /* Outline widths */
+  --neo-outline-width-0: 0;
+  --neo-outline-width-1: 1px;
+  --neo-outline-width-2: 2px;
+  --neo-outline-width-4: 4px;
+  --neo-outline-width-8: 8px;
+
+  /* Outline styles */
+  --neo-outline-style-none: none;
+  --neo-outline-style-solid: solid;
+  --neo-outline-style-dashed: dashed;
+  --neo-outline-style-dotted: dotted;
+  --neo-outline-style-double: double;
+
+  /* Outline offsets */
+  --neo-outline-offset-0: 0px;
+  --neo-outline-offset-1: 1px;
+  --neo-outline-offset-2: 2px;
+  --neo-outline-offset-4: 4px;
+  --neo-outline-offset-8: 8px;
+
+  /* Focus outline */
+  --neo-outline-focus-width: var(--neo-outline-width-2);
+  --neo-outline-focus-style: var(--neo-outline-style-solid);
+  --neo-outline-focus-color: var(--neo-color-primary-500);
+  --neo-outline-focus-offset: var(--neo-outline-offset-2);
+  --neo-outline-focus: var(--neo-outline-focus-width) var(--neo-outline-focus-style) var(--neo-outline-focus-color);
+
+  /* ==========================================================================
+     DIVIDER SYSTEM
+     ========================================================================== */
+  
+  /* Horizontal dividers */
+  --neo-divider-horizontal-width: var(--neo-border-width-1);
+  --neo-divider-horizontal-style: var(--neo-border-style-solid);
+  --neo-divider-horizontal-color: var(--neo-color-border-secondary);
+
+  /* Vertical dividers */
+  --neo-divider-vertical-width: var(--neo-border-width-1);
+  --neo-divider-vertical-style: var(--neo-border-style-solid);
+  --neo-divider-vertical-color: var(--neo-color-border-secondary);
+}

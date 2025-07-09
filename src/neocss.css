@@ -1,0 +1,124 @@
+/**
+ * NeoCSS - Utility-First + Component-Rich Hybrid CSS Framework
+ * 
+ * YAML Metadata:
+ * prompt: Initial project setup and architecture
+ * purpose: Main CSS entry point that imports all framework modules
+ * created: 2025-07-08
+ * version: 1.0.0
+ */
+
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+@import './tokens/colors.css';
+@import './tokens/spacing.css';
+@import './tokens/typography.css';
+@import './tokens/shadows.css';
+@import './tokens/borders.css';
+@import './tokens/animations.css';
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+@import './utilities/spacing.css';
+@import './utilities/layout.css';
+@import './utilities/flexbox.css';
+@import './utilities/grid.css';
+@import './utilities/typography.css';
+@import './utilities/colors.css';
+@import './utilities/borders.css';
+@import './utilities/effects.css';
+@import './utilities/transforms.css';
+@import './utilities/transitions.css';
+@import './utilities/responsive.css';
+@import './utilities/states.css';
+
+/* ==========================================================================
+   COMPONENT PRESETS
+   ========================================================================== */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/forms.css';
+@import './components/modals.css';
+@import './components/navigation.css';
+@import './components/alerts.css';
+@import './components/dropdowns.css';
+
+/* ==========================================================================
+   THEMES
+   ========================================================================== */
+@import './themes/light.css';
+@import './themes/dark.css';
+
+/* ==========================================================================
+   RESPONSIVE UTILITIES
+   ========================================================================== */
+@import './utilities/responsive-utilities.css';
+
+/* ==========================================================================
+   RTL SUPPORT
+   ========================================================================== */
+@import './utilities/rtl.css';
+
+/**
+ * Framework initialization
+ * This ensures proper CSS variable inheritance and theme setup
+ */
+:root {
+  /* Theme switching mechanism */
+  color-scheme: light dark;
+  
+  /* Default theme preference */
+  --neo-theme: 'light';
+  
+  /* Framework metadata */
+  --neo-version: '1.0.0';
+  --neo-build: 'development';
+}
+
+/* Automatic dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --neo-theme: 'dark';
+  }
+}
+
+/* Theme attribute selectors */
+[data-theme="light"] {
+  --neo-theme: 'light';
+}
+
+[data-theme="dark"] {
+  --neo-theme: 'dark';
+}
+
+/* Base framework styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--neo-font-family-base);
+  font-size: var(--neo-font-size-base);
+  line-height: var(--neo-line-height-base);
+  color: var(--neo-color-text-primary);
+  background-color: var(--neo-color-background-primary);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}

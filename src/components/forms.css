@@ -1,0 +1,494 @@
+/**
+ * NeoCSS Form Components
+ * 
+ * YAML Metadata:
+ * prompt: Component system architecture development
+ * purpose: Comprehensive form component system with validation and accessibility
+ * created: 2025-07-08
+ * features: inputs, labels, validation states, form layouts, accessibility
+ */
+
+/* ==========================================================================
+   FORM GROUPS
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: var(--neo-space-form-group-gap);
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   LABELS
+   ========================================================================== */
+
+.form-label {
+  display: block;
+  margin-bottom: var(--neo-space-form-label-gap);
+  font-size: var(--neo-label-font-size);
+  font-weight: var(--neo-label-font-weight);
+  line-height: var(--neo-label-line-height);
+  color: var(--neo-color-text-primary);
+}
+
+.form-label-required::after {
+  content: ' *';
+  color: var(--neo-color-error-500);
+}
+
+.form-label-inline {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: var(--neo-space-2);
+}
+
+/* ==========================================================================
+   BASE INPUT STYLES
+   ========================================================================== */
+
+.form-control {
+  /* Structure */
+  display: block;
+  width: 100%;
+  
+  /* Typography */
+  font-family: var(--neo-input-font-family);
+  font-size: var(--neo-input-font-size);
+  line-height: var(--neo-input-line-height);
+  color: var(--neo-color-text-primary);
+  
+  /* Spacing */
+  padding: var(--neo-space-input-padding-y) var(--neo-space-input-padding-x);
+  
+  /* Appearance */
+  background-color: var(--neo-color-background-primary);
+  border: var(--neo-border-input-width) var(--neo-border-input-style) var(--neo-color-border-primary);
+  border-radius: var(--neo-border-input-radius);
+  box-shadow: var(--neo-shadow-input);
+  
+  /* Interaction */
+  transition: var(--neo-transition-input);
+  
+  /* Accessibility */
+  appearance: none;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--neo-color-border-focus);
+  border-width: var(--neo-border-input-focus-width);
+  box-shadow: var(--neo-shadow-input-focus);
+}
+
+.form-control:disabled {
+  background-color: var(--neo-color-background-secondary);
+  border-color: var(--neo-color-border-secondary);
+  color: var(--neo-color-text-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-control::placeholder {
+  color: var(--neo-color-text-tertiary);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   INPUT SIZES
+   ========================================================================== */
+
+.form-control-sm {
+  padding: var(--neo-space-1-5) var(--neo-space-2-5);
+  font-size: var(--neo-font-size-sm);
+  border-radius: var(--neo-border-radius-sm);
+}
+
+.form-control-lg {
+  padding: var(--neo-space-3) var(--neo-space-4);
+  font-size: var(--neo-font-size-lg);
+  border-radius: var(--neo-border-radius-lg);
+}
+
+/* ==========================================================================
+   INPUT VARIANTS
+   ========================================================================== */
+
+.form-control-filled {
+  background-color: var(--neo-color-surface-secondary);
+  border: none;
+  border-bottom: 2px solid var(--neo-color-border-primary);
+  border-radius: var(--neo-border-radius-md) var(--neo-border-radius-md) 0 0;
+  box-shadow: none;
+}
+
+.form-control-filled:focus {
+  border-bottom-color: var(--neo-color-border-focus);
+  box-shadow: 0 1px 0 var(--neo-color-border-focus);
+}
+
+.form-control-underlined {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--neo-color-border-primary);
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-control-underlined:focus {
+  border-bottom-width: 2px;
+  border-bottom-color: var(--neo-color-border-focus);
+}
+
+/* ==========================================================================
+   VALIDATION STATES
+   ========================================================================== */
+
+.form-control.is-valid {
+  border-color: var(--neo-color-success-500);
+  box-shadow: var(--neo-shadow-input-success);
+}
+
+.form-control.is-valid:focus {
+  border-color: var(--neo-color-success-600);
+  box-shadow: var(--neo-shadow-input-success);
+}
+
+.form-control.is-invalid {
+  border-color: var(--neo-color-error-500);
+  box-shadow: var(--neo-shadow-input-error);
+}
+
+.form-control.is-invalid:focus {
+  border-color: var(--neo-color-error-600);
+  box-shadow: var(--neo-shadow-input-error);
+}
+
+/* ==========================================================================
+   HELP TEXT
+   ========================================================================== */
+
+.form-help {
+  display: block;
+  margin-top: var(--neo-space-form-help-gap);
+  font-size: var(--neo-help-text-font-size);
+  line-height: var(--neo-help-text-line-height);
+  color: var(--neo-color-text-secondary);
+}
+
+.form-help-success {
+  color: var(--neo-color-success-600);
+}
+
+.form-help-error {
+  color: var(--neo-color-error-600);
+}
+
+/* ==========================================================================
+   TEXTAREA
+   ========================================================================== */
+
+.form-textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.form-textarea-auto {
+  resize: none;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   SELECT
+   ========================================================================== */
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right var(--neo-space-2) center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: var(--neo-space-8);
+}
+
+.form-select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.form-select[multiple] {
+  background-image: none;
+  padding-right: var(--neo-space-input-padding-x);
+}
+
+/* ==========================================================================
+   CHECKBOXES AND RADIOS
+   ========================================================================== */
+
+.form-check {
+  display: block;
+  position: relative;
+  padding-left: var(--neo-space-6);
+  margin-bottom: var(--neo-space-2);
+}
+
+.form-check-input {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  background-color: var(--neo-color-background-primary);
+  border: 1px solid var(--neo-color-border-primary);
+  appearance: none;
+  cursor: pointer;
+  transition: var(--neo-transition-input);
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: var(--neo-border-radius-sm);
+}
+
+.form-check-input[type="radio"] {
+  border-radius: var(--neo-border-radius-full);
+}
+
+.form-check-input:focus {
+  border-color: var(--neo-color-border-focus);
+  box-shadow: var(--neo-shadow-input-focus);
+}
+
+.form-check-input:checked {
+  background-color: var(--neo-color-primary-500);
+  border-color: var(--neo-color-primary-500);
+}
+
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3e%3cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+}
+
+.form-check-input:checked[type="radio"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='3' fill='white'/%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.375rem;
+}
+
+.form-check-input:disabled {
+  background-color: var(--neo-color-background-secondary);
+  border-color: var(--neo-color-border-secondary);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-size: var(--neo-font-size-sm);
+  color: var(--neo-color-text-primary);
+}
+
+.form-check-input:disabled ~ .form-check-label {
+  color: var(--neo-color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   INLINE CHECKBOXES AND RADIOS
+   ========================================================================== */
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: var(--neo-space-4);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SWITCHES
+   ========================================================================== */
+
+.form-switch {
+  padding-left: var(--neo-space-10);
+}
+
+.form-switch .form-check-input {
+  width: 2rem;
+  height: 1rem;
+  background-color: var(--neo-color-neutral-300);
+  border: none;
+  border-radius: var(--neo-border-radius-full);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: var(--neo-transition-input);
+}
+
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+  box-shadow: var(--neo-shadow-input-focus);
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--neo-color-primary-500);
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+
+/* ==========================================================================
+   RANGE INPUTS
+   ========================================================================== */
+
+.form-range {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+  border: none;
+}
+
+.form-range:focus {
+  outline: none;
+}
+
+.form-range::-webkit-slider-track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--neo-color-neutral-200);
+  border-radius: var(--neo-border-radius-full);
+  border: none;
+}
+
+.form-range::-webkit-slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--neo-color-primary-500);
+  border-radius: var(--neo-border-radius-full);
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition: var(--neo-transition-input);
+}
+
+.form-range::-webkit-slider-thumb:hover {
+  background-color: var(--neo-color-primary-600);
+  transform: scale(1.1);
+}
+
+.form-range::-moz-range-track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--neo-color-neutral-200);
+  border-radius: var(--neo-border-radius-full);
+  border: none;
+}
+
+.form-range::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--neo-color-primary-500);
+  border-radius: var(--neo-border-radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--neo-transition-input);
+}
+
+.form-range::-moz-range-thumb:hover {
+  background-color: var(--neo-color-primary-600);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   INPUT GROUPS
+   ========================================================================== */
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: var(--neo-space-input-padding-y) var(--neo-space-input-padding-x);
+  font-size: var(--neo-input-font-size);
+  font-weight: var(--neo-font-weight-normal);
+  line-height: var(--neo-input-line-height);
+  color: var(--neo-color-text-secondary);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--neo-color-surface-secondary);
+  border: var(--neo-border-input-width) var(--neo-border-input-style) var(--neo-color-border-primary);
+}
+
+.input-group > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.input-group > .form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .input-group-text:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.input-group > .input-group-text:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .form-control:focus {
+  z-index: 3;
+}
+
+/* ==========================================================================
+   FLOATING LABELS
+   ========================================================================== */
+
+.form-floating {
+  position: relative;
+}
+
+.form-floating > .form-control {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem;
+}
+
+.form-floating > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}

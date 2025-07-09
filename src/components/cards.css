@@ -1,0 +1,418 @@
+/**
+ * NeoCSS Card Components
+ * 
+ * YAML Metadata:
+ * prompt: Component system architecture development
+ * purpose: Flexible card component system with variants and layouts
+ * created: 2025-07-08
+ * features: card layouts, variants, interactive states, media support
+ */
+
+/* ==========================================================================
+   BASE CARD
+   ========================================================================== */
+
+.card {
+  /* Structure */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  /* Appearance */
+  background-color: var(--neo-color-surface-raised);
+  border: var(--neo-border-card-width) var(--neo-border-card-style) var(--neo-color-border-primary);
+  border-radius: var(--neo-border-card-radius);
+  box-shadow: var(--neo-shadow-card);
+  
+  /* Spacing */
+  overflow: hidden;
+  
+  /* Interaction */
+  transition: var(--neo-transition-card);
+}
+
+.card:hover {
+  box-shadow: var(--neo-shadow-card-hover);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+/* ==========================================================================
+   CARD SECTIONS
+   ========================================================================== */
+
+.card-header {
+  padding: var(--neo-space-card-header-padding);
+  border-bottom: 1px solid var(--neo-color-border-secondary);
+  background-color: var(--neo-color-surface-secondary);
+  border-radius: var(--neo-border-card-radius) var(--neo-border-card-radius) 0 0;
+}
+
+.card-body {
+  padding: var(--neo-space-card-body-padding);
+  flex: 1 1 auto;
+}
+
+.card-footer {
+  padding: var(--neo-space-card-footer-padding);
+  border-top: 1px solid var(--neo-color-border-secondary);
+  background-color: var(--neo-color-surface-secondary);
+  border-radius: 0 0 var(--neo-border-card-radius) var(--neo-border-card-radius);
+}
+
+/* ==========================================================================
+   CARD CONTENT ELEMENTS
+   ========================================================================== */
+
+.card-title {
+  margin: 0 0 var(--neo-space-2) 0;
+  font-size: var(--neo-font-size-xl);
+  font-weight: var(--neo-font-weight-semibold);
+  line-height: var(--neo-line-height-tight);
+  color: var(--neo-color-text-primary);
+}
+
+.card-subtitle {
+  margin: 0 0 var(--neo-space-3) 0;
+  font-size: var(--neo-font-size-sm);
+  font-weight: var(--neo-font-weight-medium);
+  color: var(--neo-color-text-secondary);
+}
+
+.card-text {
+  margin: 0 0 var(--neo-space-4) 0;
+  color: var(--neo-color-text-primary);
+  line-height: var(--neo-line-height-relaxed);
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  color: var(--neo-color-link);
+  text-decoration: none;
+  font-weight: var(--neo-font-weight-medium);
+  transition: var(--neo-transition-colors);
+}
+
+.card-link:hover {
+  color: var(--neo-color-link-hover);
+  text-decoration: underline;
+}
+
+.card-link + .card-link {
+  margin-left: var(--neo-space-4);
+}
+
+/* ==========================================================================
+   CARD MEDIA
+   ========================================================================== */
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-img-top {
+  border-radius: var(--neo-border-card-radius) var(--neo-border-card-radius) 0 0;
+}
+
+.card-img-bottom {
+  border-radius: 0 0 var(--neo-border-card-radius) var(--neo-border-card-radius);
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--neo-space-card-body-padding);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  color: var(--neo-color-text-inverse);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--neo-border-card-radius);
+}
+
+.card-img-overlay .card-title,
+.card-img-overlay .card-text {
+  color: var(--neo-color-text-inverse);
+}
+
+/* ==========================================================================
+   CARD VARIANTS
+   ========================================================================== */
+
+/* Elevated Card */
+.card-elevated {
+  box-shadow: var(--neo-shadow-card-raised);
+  border: none;
+}
+
+.card-elevated:hover {
+  box-shadow: var(--neo-shadow-xl);
+  transform: translateY(var(--neo-hover-lift));
+}
+
+/* Outlined Card */
+.card-outlined {
+  border: 2px solid var(--neo-color-border-primary);
+  box-shadow: none;
+}
+
+.card-outlined:hover {
+  border-color: var(--neo-color-border-focus);
+  box-shadow: var(--neo-shadow-sm);
+}
+
+/* Filled Card */
+.card-filled {
+  background-color: var(--neo-color-surface-secondary);
+  border: none;
+  box-shadow: none;
+}
+
+/* Gradient Card */
+.card-gradient {
+  background: linear-gradient(135deg, var(--neo-color-primary-500) 0%, var(--neo-color-secondary-500) 100%);
+  border: none;
+  color: var(--neo-color-text-inverse);
+}
+
+.card-gradient .card-title,
+.card-gradient .card-text,
+.card-gradient .card-subtitle {
+  color: var(--neo-color-text-inverse);
+}
+
+/* Glass Card */
+.card-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   CARD SIZES
+   ========================================================================== */
+
+.card-sm {
+  max-width: 20rem;
+}
+
+.card-sm .card-header,
+.card-sm .card-body,
+.card-sm .card-footer {
+  padding: var(--neo-space-3);
+}
+
+.card-sm .card-title {
+  font-size: var(--neo-font-size-lg);
+}
+
+.card-md {
+  max-width: 24rem;
+}
+
+.card-lg {
+  max-width: 32rem;
+}
+
+.card-lg .card-header,
+.card-lg .card-body,
+.card-lg .card-footer {
+  padding: var(--neo-space-8);
+}
+
+.card-lg .card-title {
+  font-size: var(--neo-font-size-2xl);
+}
+
+.card-xl {
+  max-width: 40rem;
+}
+
+.card-xl .card-header,
+.card-xl .card-body,
+.card-xl .card-footer {
+  padding: var(--neo-space-10);
+}
+
+.card-xl .card-title {
+  font-size: var(--neo-font-size-3xl);
+}
+
+/* ==========================================================================
+   CARD LAYOUTS
+   ========================================================================== */
+
+/* Horizontal Card */
+.card-horizontal {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.card-horizontal .card-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-horizontal .card-img-top {
+  border-radius: var(--neo-border-card-radius) 0 0 var(--neo-border-card-radius);
+}
+
+.card-horizontal .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Compact Card */
+.card-compact .card-header,
+.card-compact .card-body,
+.card-compact .card-footer {
+  padding: var(--neo-space-3);
+}
+
+.card-compact .card-title {
+  font-size: var(--neo-font-size-lg);
+  margin-bottom: var(--neo-space-1);
+}
+
+.card-compact .card-text {
+  margin-bottom: var(--neo-space-2);
+}
+
+/* ==========================================================================
+   INTERACTIVE CARDS
+   ========================================================================== */
+
+.card-clickable {
+  cursor: pointer;
+  transition: var(--neo-transition-card);
+}
+
+.card-clickable:hover {
+  transform: translateY(var(--neo-hover-lift));
+  box-shadow: var(--neo-shadow-lg);
+}
+
+.card-clickable:active {
+  transform: translateY(0);
+  box-shadow: var(--neo-shadow-md);
+}
+
+/* ==========================================================================
+   CARD GROUPS
+   ========================================================================== */
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--neo-space-card-gap);
+}
+
+.card-group .card {
+  flex: 1 1 0%;
+  margin-bottom: 0;
+}
+
+/* Card Deck */
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--neo-space-card-gap);
+}
+
+.card-deck .card {
+  flex: 1 1 0%;
+  margin-bottom: var(--neo-space-card-gap);
+}
+
+/* Card Columns */
+.card-columns {
+  column-count: 3;
+  column-gap: var(--neo-space-card-gap);
+  orphans: 1;
+  widows: 1;
+}
+
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: var(--neo-space-card-gap);
+  break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+
+/* ==========================================================================
+   CARD STATES
+   ========================================================================== */
+
+.card-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: var(--neo-animation-skeleton);
+}
+
+.card-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(50%);
+}
+
+/* ==========================================================================
+   RESPONSIVE CARDS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  
+  .card-horizontal .card-img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card-horizontal .card-img-top {
+    border-radius: var(--neo-border-card-radius) var(--neo-border-card-radius) 0 0;
+  }
+  
+  .card-group,
+  .card-deck {
+    flex-direction: column;
+  }
+  
+  .card-group .card,
+  .card-deck .card {
+    flex: none;
+  }
+}

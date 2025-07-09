@@ -1,0 +1,463 @@
+/**
+ * NeoCSS Button Components
+ * 
+ * YAML Metadata:
+ * prompt: Component system architecture development
+ * purpose: Comprehensive button component system with variants, sizes, and states
+ * created: 2025-07-08
+ * features: button variants, sizes, states, accessibility, loading states
+ */
+
+/* ==========================================================================
+   BASE BUTTON
+   ========================================================================== */
+
+.btn {
+  /* Base structure */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--neo-space-button-gap);
+  
+  /* Typography */
+  font-family: var(--neo-button-font-family);
+  font-weight: var(--neo-button-font-weight);
+  font-size: var(--neo-button-md-font-size);
+  letter-spacing: var(--neo-button-letter-spacing);
+  text-transform: var(--neo-button-text-transform);
+  text-decoration: none;
+  line-height: 1;
+  
+  /* Spacing */
+  padding: var(--neo-space-button-padding-y-md) var(--neo-space-button-padding-x-md);
+  
+  /* Appearance */
+  border: var(--neo-border-button-width) var(--neo-border-button-style) transparent;
+  border-radius: var(--neo-border-button-radius);
+  background-color: transparent;
+  color: var(--neo-color-text-primary);
+  
+  /* Interaction */
+  cursor: pointer;
+  user-select: none;
+  transition: var(--neo-transition-button);
+  
+  /* Accessibility */
+  position: relative;
+  overflow: hidden;
+  
+  /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--neo-focus-button);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   BUTTON VARIANTS
+   ========================================================================== */
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--neo-color-button-primary);
+  border-color: var(--neo-color-button-primary);
+  color: var(--neo-color-button-primary-text);
+  box-shadow: var(--neo-shadow-button);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--neo-color-button-primary-hover);
+  border-color: var(--neo-color-button-primary-hover);
+  box-shadow: var(--neo-shadow-button-hover);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: var(--neo-color-button-primary-active);
+  border-color: var(--neo-color-button-primary-active);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--neo-color-button-secondary);
+  border-color: var(--neo-color-button-secondary);
+  color: var(--neo-color-button-secondary-text);
+  box-shadow: var(--neo-shadow-button);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--neo-color-button-secondary-hover);
+  border-color: var(--neo-color-button-secondary-hover);
+  box-shadow: var(--neo-shadow-button-hover);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-secondary:active:not(:disabled) {
+  background-color: var(--neo-color-button-secondary-active);
+  border-color: var(--neo-color-button-secondary-active);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* Success Button */
+.btn-success {
+  background-color: var(--neo-color-success-500);
+  border-color: var(--neo-color-success-500);
+  color: var(--neo-color-neutral-50);
+  box-shadow: var(--neo-shadow-success-md);
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: var(--neo-color-success-600);
+  border-color: var(--neo-color-success-600);
+  box-shadow: var(--neo-shadow-success-lg);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-success:active:not(:disabled) {
+  background-color: var(--neo-color-success-700);
+  border-color: var(--neo-color-success-700);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* Warning Button */
+.btn-warning {
+  background-color: var(--neo-color-warning-500);
+  border-color: var(--neo-color-warning-500);
+  color: var(--neo-color-neutral-900);
+  box-shadow: var(--neo-shadow-warning-md);
+}
+
+.btn-warning:hover:not(:disabled) {
+  background-color: var(--neo-color-warning-600);
+  border-color: var(--neo-color-warning-600);
+  box-shadow: var(--neo-shadow-warning-lg);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-warning:active:not(:disabled) {
+  background-color: var(--neo-color-warning-700);
+  border-color: var(--neo-color-warning-700);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* Error/Danger Button */
+.btn-error,
+.btn-danger {
+  background-color: var(--neo-color-error-500);
+  border-color: var(--neo-color-error-500);
+  color: var(--neo-color-neutral-50);
+  box-shadow: var(--neo-shadow-error-md);
+}
+
+.btn-error:hover:not(:disabled),
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--neo-color-error-600);
+  border-color: var(--neo-color-error-600);
+  box-shadow: var(--neo-shadow-error-lg);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-error:active:not(:disabled),
+.btn-danger:active:not(:disabled) {
+  background-color: var(--neo-color-error-700);
+  border-color: var(--neo-color-error-700);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* Info Button */
+.btn-info {
+  background-color: var(--neo-color-info-500);
+  border-color: var(--neo-color-info-500);
+  color: var(--neo-color-neutral-50);
+  box-shadow: var(--neo-shadow-md);
+}
+
+.btn-info:hover:not(:disabled) {
+  background-color: var(--neo-color-info-600);
+  border-color: var(--neo-color-info-600);
+  box-shadow: var(--neo-shadow-lg);
+  transform: translateY(var(--neo-hover-lift-sm));
+}
+
+.btn-info:active:not(:disabled) {
+  background-color: var(--neo-color-info-700);
+  border-color: var(--neo-color-info-700);
+  box-shadow: var(--neo-shadow-button-active);
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   OUTLINE VARIANTS
+   ========================================================================== */
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--neo-color-border-primary);
+  color: var(--neo-color-text-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--neo-color-neutral-100);
+  border-color: var(--neo-color-border-focus);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--neo-color-primary-500);
+  color: var(--neo-color-primary-500);
+}
+
+.btn-outline-primary:hover:not(:disabled) {
+  background-color: var(--neo-color-primary-500);
+  color: var(--neo-color-neutral-50);
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border-color: var(--neo-color-secondary-500);
+  color: var(--neo-color-secondary-500);
+}
+
+.btn-outline-secondary:hover:not(:disabled) {
+  background-color: var(--neo-color-secondary-500);
+  color: var(--neo-color-neutral-50);
+}
+
+.btn-outline-success {
+  background-color: transparent;
+  border-color: var(--neo-color-success-500);
+  color: var(--neo-color-success-500);
+}
+
+.btn-outline-success:hover:not(:disabled) {
+  background-color: var(--neo-color-success-500);
+  color: var(--neo-color-neutral-50);
+}
+
+.btn-outline-warning {
+  background-color: transparent;
+  border-color: var(--neo-color-warning-500);
+  color: var(--neo-color-warning-500);
+}
+
+.btn-outline-warning:hover:not(:disabled) {
+  background-color: var(--neo-color-warning-500);
+  color: var(--neo-color-neutral-900);
+}
+
+.btn-outline-error,
+.btn-outline-danger {
+  background-color: transparent;
+  border-color: var(--neo-color-error-500);
+  color: var(--neo-color-error-500);
+}
+
+.btn-outline-error:hover:not(:disabled),
+.btn-outline-danger:hover:not(:disabled) {
+  background-color: var(--neo-color-error-500);
+  color: var(--neo-color-neutral-50);
+}
+
+.btn-outline-info {
+  background-color: transparent;
+  border-color: var(--neo-color-info-500);
+  color: var(--neo-color-info-500);
+}
+
+.btn-outline-info:hover:not(:disabled) {
+  background-color: var(--neo-color-info-500);
+  color: var(--neo-color-neutral-50);
+}
+
+/* ==========================================================================
+   GHOST VARIANTS
+   ========================================================================== */
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--neo-color-text-primary);
+  box-shadow: none;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--neo-color-neutral-100);
+}
+
+.btn-ghost-primary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--neo-color-primary-500);
+}
+
+.btn-ghost-primary:hover:not(:disabled) {
+  background-color: var(--neo-color-primary-100);
+  color: var(--neo-color-primary-600);
+}
+
+.btn-ghost-secondary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--neo-color-secondary-500);
+}
+
+.btn-ghost-secondary:hover:not(:disabled) {
+  background-color: var(--neo-color-secondary-100);
+  color: var(--neo-color-secondary-600);
+}
+
+/* ==========================================================================
+   BUTTON SIZES
+   ========================================================================== */
+
+.btn-xs {
+  padding: var(--neo-space-1) var(--neo-space-2);
+  font-size: var(--neo-font-size-xs);
+  border-radius: var(--neo-border-radius-sm);
+  gap: var(--neo-space-1);
+}
+
+.btn-sm {
+  padding: var(--neo-space-button-padding-y-sm) var(--neo-space-button-padding-x-sm);
+  font-size: var(--neo-button-sm-font-size);
+  border-radius: var(--neo-border-button-radius-sm);
+}
+
+.btn-md {
+  /* Default size - already defined in .btn */
+}
+
+.btn-lg {
+  padding: var(--neo-space-button-padding-y-lg) var(--neo-space-button-padding-x-lg);
+  font-size: var(--neo-button-lg-font-size);
+  border-radius: var(--neo-border-button-radius-lg);
+}
+
+.btn-xl {
+  padding: var(--neo-space-4) var(--neo-space-8);
+  font-size: var(--neo-font-size-xl);
+  border-radius: var(--neo-border-radius-xl);
+  gap: var(--neo-space-3);
+}
+
+/* ==========================================================================
+   BUTTON SHAPES
+   ========================================================================== */
+
+.btn-square {
+  aspect-ratio: 1;
+  padding: var(--neo-space-button-padding-y-md);
+}
+
+.btn-circle {
+  aspect-ratio: 1;
+  padding: var(--neo-space-button-padding-y-md);
+  border-radius: var(--neo-border-radius-full);
+}
+
+.btn-pill {
+  border-radius: var(--neo-border-radius-full);
+}
+
+/* ==========================================================================
+   BUTTON STATES
+   ========================================================================== */
+
+.btn-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem 0 0 -0.5rem;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: var(--neo-animation-spin);
+}
+
+.btn-active {
+  background-color: var(--neo-color-primary-700);
+  border-color: var(--neo-color-primary-700);
+  box-shadow: var(--neo-shadow-inner);
+}
+
+/* ==========================================================================
+   BUTTON GROUPS
+   ========================================================================== */
+
+.btn-group {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btn-group .btn {
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.btn-group .btn:first-child {
+  margin-left: 0;
+  border-top-left-radius: var(--neo-border-button-radius);
+  border-bottom-left-radius: var(--neo-border-button-radius);
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: var(--neo-border-button-radius);
+  border-bottom-right-radius: var(--neo-border-button-radius);
+}
+
+.btn-group .btn:hover,
+.btn-group .btn:focus,
+.btn-group .btn:active {
+  z-index: 1;
+}
+
+/* Vertical button group */
+.btn-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.btn-group-vertical .btn {
+  width: 100%;
+  border-radius: 0;
+  margin-top: -1px;
+}
+
+.btn-group-vertical .btn:first-child {
+  margin-top: 0;
+  border-top-left-radius: var(--neo-border-button-radius);
+  border-top-right-radius: var(--neo-border-button-radius);
+}
+
+.btn-group-vertical .btn:last-child {
+  border-bottom-left-radius: var(--neo-border-button-radius);
+  border-bottom-right-radius: var(--neo-border-button-radius);
+}

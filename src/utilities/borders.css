@@ -1,0 +1,283 @@
+/**
+ * NeoCSS Border Utilities
+ * 
+ * YAML Metadata:
+ * prompt: Complete remaining utility classes for global compatibility
+ * purpose: Comprehensive border utilities for width, style, radius, and individual sides
+ * created: 2025-07-08
+ * features: border width, border style, border radius, individual sides, outline
+ */
+
+/* ==========================================================================
+   BORDER WIDTH
+   ========================================================================== */
+
+.border-0 { border-width: 0; }
+.border { border-width: var(--neo-border-width-1); }
+.border-2 { border-width: var(--neo-border-width-2); }
+.border-4 { border-width: var(--neo-border-width-4); }
+.border-8 { border-width: var(--neo-border-width-8); }
+
+/* Individual sides */
+.border-x-0 { border-left-width: 0; border-right-width: 0; }
+.border-x { border-left-width: var(--neo-border-width-1); border-right-width: var(--neo-border-width-1); }
+.border-x-2 { border-left-width: var(--neo-border-width-2); border-right-width: var(--neo-border-width-2); }
+.border-x-4 { border-left-width: var(--neo-border-width-4); border-right-width: var(--neo-border-width-4); }
+.border-x-8 { border-left-width: var(--neo-border-width-8); border-right-width: var(--neo-border-width-8); }
+
+.border-y-0 { border-top-width: 0; border-bottom-width: 0; }
+.border-y { border-top-width: var(--neo-border-width-1); border-bottom-width: var(--neo-border-width-1); }
+.border-y-2 { border-top-width: var(--neo-border-width-2); border-bottom-width: var(--neo-border-width-2); }
+.border-y-4 { border-top-width: var(--neo-border-width-4); border-bottom-width: var(--neo-border-width-4); }
+.border-y-8 { border-top-width: var(--neo-border-width-8); border-bottom-width: var(--neo-border-width-8); }
+
+.border-t-0 { border-top-width: 0; }
+.border-t { border-top-width: var(--neo-border-width-1); }
+.border-t-2 { border-top-width: var(--neo-border-width-2); }
+.border-t-4 { border-top-width: var(--neo-border-width-4); }
+.border-t-8 { border-top-width: var(--neo-border-width-8); }
+
+.border-r-0 { border-right-width: 0; }
+.border-r { border-right-width: var(--neo-border-width-1); }
+.border-r-2 { border-right-width: var(--neo-border-width-2); }
+.border-r-4 { border-right-width: var(--neo-border-width-4); }
+.border-r-8 { border-right-width: var(--neo-border-width-8); }
+
+.border-b-0 { border-bottom-width: 0; }
+.border-b { border-bottom-width: var(--neo-border-width-1); }
+.border-b-2 { border-bottom-width: var(--neo-border-width-2); }
+.border-b-4 { border-bottom-width: var(--neo-border-width-4); }
+.border-b-8 { border-bottom-width: var(--neo-border-width-8); }
+
+.border-l-0 { border-left-width: 0; }
+.border-l { border-left-width: var(--neo-border-width-1); }
+.border-l-2 { border-left-width: var(--neo-border-width-2); }
+.border-l-4 { border-left-width: var(--neo-border-width-4); }
+.border-l-8 { border-left-width: var(--neo-border-width-8); }
+
+/* ==========================================================================
+   BORDER STYLE
+   ========================================================================== */
+
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-dotted { border-style: dotted; }
+.border-double { border-style: double; }
+.border-groove { border-style: groove; }
+.border-ridge { border-style: ridge; }
+.border-inset { border-style: inset; }
+.border-outset { border-style: outset; }
+.border-none { border-style: none; }
+.border-hidden { border-style: hidden; }
+
+/* ==========================================================================
+   BORDER RADIUS
+   ========================================================================== */
+
+.rounded-none { border-radius: var(--neo-border-radius-none); }
+.rounded-sm { border-radius: var(--neo-border-radius-sm); }
+.rounded { border-radius: var(--neo-border-radius-md); }
+.rounded-md { border-radius: var(--neo-border-radius-md); }
+.rounded-lg { border-radius: var(--neo-border-radius-lg); }
+.rounded-xl { border-radius: var(--neo-border-radius-xl); }
+.rounded-2xl { border-radius: var(--neo-border-radius-2xl); }
+.rounded-3xl { border-radius: var(--neo-border-radius-3xl); }
+.rounded-full { border-radius: var(--neo-border-radius-full); }
+
+/* Individual corners */
+.rounded-t-none { border-top-left-radius: var(--neo-border-radius-none); border-top-right-radius: var(--neo-border-radius-none); }
+.rounded-t-sm { border-top-left-radius: var(--neo-border-radius-sm); border-top-right-radius: var(--neo-border-radius-sm); }
+.rounded-t { border-top-left-radius: var(--neo-border-radius-md); border-top-right-radius: var(--neo-border-radius-md); }
+.rounded-t-md { border-top-left-radius: var(--neo-border-radius-md); border-top-right-radius: var(--neo-border-radius-md); }
+.rounded-t-lg { border-top-left-radius: var(--neo-border-radius-lg); border-top-right-radius: var(--neo-border-radius-lg); }
+.rounded-t-xl { border-top-left-radius: var(--neo-border-radius-xl); border-top-right-radius: var(--neo-border-radius-xl); }
+.rounded-t-2xl { border-top-left-radius: var(--neo-border-radius-2xl); border-top-right-radius: var(--neo-border-radius-2xl); }
+.rounded-t-3xl { border-top-left-radius: var(--neo-border-radius-3xl); border-top-right-radius: var(--neo-border-radius-3xl); }
+.rounded-t-full { border-top-left-radius: var(--neo-border-radius-full); border-top-right-radius: var(--neo-border-radius-full); }
+
+.rounded-r-none { border-top-right-radius: var(--neo-border-radius-none); border-bottom-right-radius: var(--neo-border-radius-none); }
+.rounded-r-sm { border-top-right-radius: var(--neo-border-radius-sm); border-bottom-right-radius: var(--neo-border-radius-sm); }
+.rounded-r { border-top-right-radius: var(--neo-border-radius-md); border-bottom-right-radius: var(--neo-border-radius-md); }
+.rounded-r-md { border-top-right-radius: var(--neo-border-radius-md); border-bottom-right-radius: var(--neo-border-radius-md); }
+.rounded-r-lg { border-top-right-radius: var(--neo-border-radius-lg); border-bottom-right-radius: var(--neo-border-radius-lg); }
+.rounded-r-xl { border-top-right-radius: var(--neo-border-radius-xl); border-bottom-right-radius: var(--neo-border-radius-xl); }
+.rounded-r-2xl { border-top-right-radius: var(--neo-border-radius-2xl); border-bottom-right-radius: var(--neo-border-radius-2xl); }
+.rounded-r-3xl { border-top-right-radius: var(--neo-border-radius-3xl); border-bottom-right-radius: var(--neo-border-radius-3xl); }
+.rounded-r-full { border-top-right-radius: var(--neo-border-radius-full); border-bottom-right-radius: var(--neo-border-radius-full); }
+
+.rounded-b-none { border-bottom-right-radius: var(--neo-border-radius-none); border-bottom-left-radius: var(--neo-border-radius-none); }
+.rounded-b-sm { border-bottom-right-radius: var(--neo-border-radius-sm); border-bottom-left-radius: var(--neo-border-radius-sm); }
+.rounded-b { border-bottom-right-radius: var(--neo-border-radius-md); border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-b-md { border-bottom-right-radius: var(--neo-border-radius-md); border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-b-lg { border-bottom-right-radius: var(--neo-border-radius-lg); border-bottom-left-radius: var(--neo-border-radius-lg); }
+.rounded-b-xl { border-bottom-right-radius: var(--neo-border-radius-xl); border-bottom-left-radius: var(--neo-border-radius-xl); }
+.rounded-b-2xl { border-bottom-right-radius: var(--neo-border-radius-2xl); border-bottom-left-radius: var(--neo-border-radius-2xl); }
+.rounded-b-3xl { border-bottom-right-radius: var(--neo-border-radius-3xl); border-bottom-left-radius: var(--neo-border-radius-3xl); }
+.rounded-b-full { border-bottom-right-radius: var(--neo-border-radius-full); border-bottom-left-radius: var(--neo-border-radius-full); }
+
+.rounded-l-none { border-top-left-radius: var(--neo-border-radius-none); border-bottom-left-radius: var(--neo-border-radius-none); }
+.rounded-l-sm { border-top-left-radius: var(--neo-border-radius-sm); border-bottom-left-radius: var(--neo-border-radius-sm); }
+.rounded-l { border-top-left-radius: var(--neo-border-radius-md); border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-l-md { border-top-left-radius: var(--neo-border-radius-md); border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-l-lg { border-top-left-radius: var(--neo-border-radius-lg); border-bottom-left-radius: var(--neo-border-radius-lg); }
+.rounded-l-xl { border-top-left-radius: var(--neo-border-radius-xl); border-bottom-left-radius: var(--neo-border-radius-xl); }
+.rounded-l-2xl { border-top-left-radius: var(--neo-border-radius-2xl); border-bottom-left-radius: var(--neo-border-radius-2xl); }
+.rounded-l-3xl { border-top-left-radius: var(--neo-border-radius-3xl); border-bottom-left-radius: var(--neo-border-radius-3xl); }
+.rounded-l-full { border-top-left-radius: var(--neo-border-radius-full); border-bottom-left-radius: var(--neo-border-radius-full); }
+
+/* Individual corner utilities */
+.rounded-tl-none { border-top-left-radius: var(--neo-border-radius-none); }
+.rounded-tl-sm { border-top-left-radius: var(--neo-border-radius-sm); }
+.rounded-tl { border-top-left-radius: var(--neo-border-radius-md); }
+.rounded-tl-md { border-top-left-radius: var(--neo-border-radius-md); }
+.rounded-tl-lg { border-top-left-radius: var(--neo-border-radius-lg); }
+.rounded-tl-xl { border-top-left-radius: var(--neo-border-radius-xl); }
+.rounded-tl-2xl { border-top-left-radius: var(--neo-border-radius-2xl); }
+.rounded-tl-3xl { border-top-left-radius: var(--neo-border-radius-3xl); }
+.rounded-tl-full { border-top-left-radius: var(--neo-border-radius-full); }
+
+.rounded-tr-none { border-top-right-radius: var(--neo-border-radius-none); }
+.rounded-tr-sm { border-top-right-radius: var(--neo-border-radius-sm); }
+.rounded-tr { border-top-right-radius: var(--neo-border-radius-md); }
+.rounded-tr-md { border-top-right-radius: var(--neo-border-radius-md); }
+.rounded-tr-lg { border-top-right-radius: var(--neo-border-radius-lg); }
+.rounded-tr-xl { border-top-right-radius: var(--neo-border-radius-xl); }
+.rounded-tr-2xl { border-top-right-radius: var(--neo-border-radius-2xl); }
+.rounded-tr-3xl { border-top-right-radius: var(--neo-border-radius-3xl); }
+.rounded-tr-full { border-top-right-radius: var(--neo-border-radius-full); }
+
+.rounded-br-none { border-bottom-right-radius: var(--neo-border-radius-none); }
+.rounded-br-sm { border-bottom-right-radius: var(--neo-border-radius-sm); }
+.rounded-br { border-bottom-right-radius: var(--neo-border-radius-md); }
+.rounded-br-md { border-bottom-right-radius: var(--neo-border-radius-md); }
+.rounded-br-lg { border-bottom-right-radius: var(--neo-border-radius-lg); }
+.rounded-br-xl { border-bottom-right-radius: var(--neo-border-radius-xl); }
+.rounded-br-2xl { border-bottom-right-radius: var(--neo-border-radius-2xl); }
+.rounded-br-3xl { border-bottom-right-radius: var(--neo-border-radius-3xl); }
+.rounded-br-full { border-bottom-right-radius: var(--neo-border-radius-full); }
+
+.rounded-bl-none { border-bottom-left-radius: var(--neo-border-radius-none); }
+.rounded-bl-sm { border-bottom-left-radius: var(--neo-border-radius-sm); }
+.rounded-bl { border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-bl-md { border-bottom-left-radius: var(--neo-border-radius-md); }
+.rounded-bl-lg { border-bottom-left-radius: var(--neo-border-radius-lg); }
+.rounded-bl-xl { border-bottom-left-radius: var(--neo-border-radius-xl); }
+.rounded-bl-2xl { border-bottom-left-radius: var(--neo-border-radius-2xl); }
+.rounded-bl-3xl { border-bottom-left-radius: var(--neo-border-radius-3xl); }
+.rounded-bl-full { border-bottom-left-radius: var(--neo-border-radius-full); }
+
+/* ==========================================================================
+   OUTLINE
+   ========================================================================== */
+
+.outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+.outline { outline-style: solid; }
+.outline-dashed { outline-style: dashed; }
+.outline-dotted { outline-style: dotted; }
+.outline-double { outline-style: double; }
+
+/* Outline width */
+.outline-0 { outline-width: 0px; }
+.outline-1 { outline-width: 1px; }
+.outline-2 { outline-width: 2px; }
+.outline-4 { outline-width: 4px; }
+.outline-8 { outline-width: 8px; }
+
+/* Outline offset */
+.outline-offset-0 { outline-offset: 0px; }
+.outline-offset-1 { outline-offset: 1px; }
+.outline-offset-2 { outline-offset: 2px; }
+.outline-offset-4 { outline-offset: 4px; }
+.outline-offset-8 { outline-offset: 8px; }
+
+/* ==========================================================================
+   RING (FOCUS RINGS)
+   ========================================================================== */
+
+.ring-0 { box-shadow: var(--neo-ring-0); }
+.ring-1 { box-shadow: var(--neo-ring-1); }
+.ring-2 { box-shadow: var(--neo-ring-2); }
+.ring { box-shadow: var(--neo-ring-3); }
+.ring-4 { box-shadow: var(--neo-ring-4); }
+.ring-8 { box-shadow: var(--neo-ring-8); }
+
+/* Ring inset */
+.ring-inset { box-shadow: var(--neo-ring-inset); }
+
+/* Ring offset */
+.ring-offset-0 { box-shadow: var(--neo-ring-offset-0); }
+.ring-offset-1 { box-shadow: var(--neo-ring-offset-1); }
+.ring-offset-2 { box-shadow: var(--neo-ring-offset-2); }
+.ring-offset-4 { box-shadow: var(--neo-ring-offset-4); }
+.ring-offset-8 { box-shadow: var(--neo-ring-offset-8); }
+
+/* ==========================================================================
+   DIVIDE (CHILD BORDERS)
+   ========================================================================== */
+
+.divide-x > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+
+.divide-x-0 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.divide-x-2 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 0;
+  border-left-width: 2px;
+}
+
+.divide-x-4 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 0;
+  border-left-width: 4px;
+}
+
+.divide-x-8 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 0;
+  border-left-width: 8px;
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 1px;
+  border-bottom-width: 0;
+}
+
+.divide-y-0 > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
+.divide-y-2 > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 2px;
+  border-bottom-width: 0;
+}
+
+.divide-y-4 > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 4px;
+  border-bottom-width: 0;
+}
+
+.divide-y-8 > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 8px;
+  border-bottom-width: 0;
+}
+
+.divide-y-reverse > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 0;
+  border-bottom-width: 1px;
+}
+
+.divide-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: 1px;
+  border-left-width: 0;
+}
+
+/* Divide styles */
+.divide-solid > :not([hidden]) ~ :not([hidden]) { border-style: solid; }
+.divide-dashed > :not([hidden]) ~ :not([hidden]) { border-style: dashed; }
+.divide-dotted > :not([hidden]) ~ :not([hidden]) { border-style: dotted; }
+.divide-double > :not([hidden]) ~ :not([hidden]) { border-style: double; }
+.divide-none > :not([hidden]) ~ :not([hidden]) { border-style: none; }

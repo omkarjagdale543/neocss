@@ -1,0 +1,470 @@
+/**
+ * NeoCSS Navigation Components
+ * 
+ * YAML Metadata:
+ * prompt: Component system architecture development
+ * purpose: Navigation components including navbar, breadcrumbs, pagination, tabs
+ * created: 2025-07-08
+ * features: responsive navbar, breadcrumbs, pagination, tabs, accessibility
+ */
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--neo-space-nav-padding-y) var(--neo-space-nav-padding-x);
+  background-color: var(--neo-color-surface-raised);
+  border: var(--neo-border-nav-width) var(--neo-border-nav-style) var(--neo-color-border-primary);
+  border-radius: var(--neo-border-nav-radius);
+  box-shadow: var(--neo-shadow-nav);
+  transition: var(--neo-transition-nav);
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: var(--neo-space-1);
+  padding-bottom: var(--neo-space-1);
+  margin-right: var(--neo-space-4);
+  font-size: var(--neo-font-size-xl);
+  font-weight: var(--neo-font-weight-bold);
+  line-height: inherit;
+  text-decoration: none;
+  color: var(--neo-color-text-primary);
+  transition: var(--neo-transition-colors);
+}
+
+.navbar-brand:hover {
+  color: var(--neo-color-primary-600);
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+}
+
+.navbar-text {
+  display: inline-block;
+  padding-top: var(--neo-space-2);
+  padding-bottom: var(--neo-space-2);
+  color: var(--neo-color-text-secondary);
+}
+
+/* ==========================================================================
+   NAVBAR EXPAND
+   ========================================================================== */
+
+.navbar-expand {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.navbar-expand .navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+  padding-right: var(--neo-space-3);
+  padding-left: var(--neo-space-3);
+}
+
+.navbar-expand .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+}
+
+.navbar-expand .navbar-toggler {
+  display: none;
+}
+
+/* Responsive navbar expand classes */
+@media (min-width: 576px) {
+  .navbar-expand-sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .navbar-expand-sm .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: var(--neo-space-3);
+    padding-left: var(--neo-space-3);
+  }
+  
+  .navbar-expand-sm .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  
+  .navbar-expand-sm .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .navbar-expand-md .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: var(--neo-space-3);
+    padding-left: var(--neo-space-3);
+  }
+  
+  .navbar-expand-md .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  
+  .navbar-expand-md .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: var(--neo-space-3);
+    padding-left: var(--neo-space-3);
+  }
+  
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   NAVBAR TOGGLER
+   ========================================================================== */
+
+.navbar-toggler {
+  padding: var(--neo-space-1) var(--neo-space-2);
+  font-size: var(--neo-font-size-lg);
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--neo-color-border-primary);
+  border-radius: var(--neo-border-radius-md);
+  color: var(--neo-color-text-secondary);
+  cursor: pointer;
+  transition: var(--neo-transition-colors);
+}
+
+.navbar-toggler:hover {
+  background-color: var(--neo-color-neutral-100);
+  color: var(--neo-color-text-primary);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: var(--neo-focus-button);
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* ==========================================================================
+   NAV LINKS
+   ========================================================================== */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--neo-space-2) var(--neo-space-3);
+  color: var(--neo-color-link);
+  text-decoration: none;
+  transition: var(--neo-transition-colors);
+  border-radius: var(--neo-border-radius-md);
+}
+
+.nav-link:hover {
+  color: var(--neo-color-link-hover);
+  background-color: var(--neo-color-neutral-100);
+}
+
+.nav-link.disabled {
+  color: var(--neo-color-text-disabled);
+  pointer-events: none;
+  cursor: default;
+}
+
+.nav-link.active {
+  color: var(--neo-color-primary-600);
+  background-color: var(--neo-color-primary-100);
+  font-weight: var(--neo-font-weight-medium);
+}
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+.nav-tabs {
+  border-bottom: 1px solid var(--neo-color-border-primary);
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  background: none;
+  border: 1px solid transparent;
+  border-top-left-radius: var(--neo-border-radius-md);
+  border-top-right-radius: var(--neo-border-radius-md);
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: var(--neo-color-border-secondary);
+  isolation: isolate;
+}
+
+.nav-tabs .nav-link.disabled {
+  color: var(--neo-color-text-disabled);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--neo-color-text-primary);
+  background-color: var(--neo-color-background-primary);
+  border-color: var(--neo-color-border-primary) var(--neo-color-border-primary) var(--neo-color-background-primary);
+}
+
+/* ==========================================================================
+   PILLS
+   ========================================================================== */
+
+.nav-pills .nav-link {
+  background: none;
+  border: 0;
+  border-radius: var(--neo-border-radius-pill);
+}
+
+.nav-pills .nav-link.active {
+  color: var(--neo-color-primary-contrast);
+  background-color: var(--neo-color-primary-500);
+}
+
+/* ==========================================================================
+   BREADCRUMBS
+   ========================================================================== */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--neo-space-3) var(--neo-space-4);
+  margin-bottom: var(--neo-space-4);
+  list-style: none;
+  background-color: var(--neo-color-surface-secondary);
+  border-radius: var(--neo-border-radius-md);
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: var(--neo-space-2);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: var(--neo-breadcrumb-divider, "/");
+  float: left;
+  padding-right: var(--neo-space-2);
+  color: var(--neo-color-text-tertiary);
+}
+
+.breadcrumb-item.active {
+  color: var(--neo-color-text-secondary);
+}
+
+.breadcrumb-item a {
+  color: var(--neo-color-link);
+  text-decoration: none;
+  transition: var(--neo-transition-colors);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--neo-color-link-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   PAGINATION
+   ========================================================================== */
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: var(--neo-border-radius-md);
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: var(--neo-space-2) var(--neo-space-3);
+  margin-left: -1px;
+  line-height: 1.25;
+  color: var(--neo-color-link);
+  text-decoration: none;
+  background-color: var(--neo-color-background-primary);
+  border: 1px solid var(--neo-color-border-primary);
+  transition: var(--neo-transition-colors);
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: var(--neo-color-link-hover);
+  background-color: var(--neo-color-neutral-100);
+  border-color: var(--neo-color-border-secondary);
+}
+
+.page-link:focus {
+  z-index: 3;
+  outline: none;
+  box-shadow: var(--neo-focus-button);
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: var(--neo-border-radius-md);
+  border-bottom-left-radius: var(--neo-border-radius-md);
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: var(--neo-border-radius-md);
+  border-bottom-right-radius: var(--neo-border-radius-md);
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: var(--neo-color-primary-contrast);
+  background-color: var(--neo-color-primary-500);
+  border-color: var(--neo-color-primary-500);
+}
+
+.page-item.disabled .page-link {
+  color: var(--neo-color-text-disabled);
+  pointer-events: none;
+  background-color: var(--neo-color-background-secondary);
+  border-color: var(--neo-color-border-secondary);
+}
+
+/* ==========================================================================
+   PAGINATION SIZES
+   ========================================================================== */
+
+.pagination-lg .page-link {
+  padding: var(--neo-space-3) var(--neo-space-4);
+  font-size: var(--neo-font-size-lg);
+  line-height: 1.5;
+}
+
+.pagination-lg .page-item:first-child .page-link {
+  border-top-left-radius: var(--neo-border-radius-lg);
+  border-bottom-left-radius: var(--neo-border-radius-lg);
+}
+
+.pagination-lg .page-item:last-child .page-link {
+  border-top-right-radius: var(--neo-border-radius-lg);
+  border-bottom-right-radius: var(--neo-border-radius-lg);
+}
+
+.pagination-sm .page-link {
+  padding: var(--neo-space-1) var(--neo-space-2);
+  font-size: var(--neo-font-size-sm);
+  line-height: 1.5;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+  border-top-left-radius: var(--neo-border-radius-sm);
+  border-bottom-left-radius: var(--neo-border-radius-sm);
+}
+
+.pagination-sm .page-item:last-child .page-link {
+  border-top-right-radius: var(--neo-border-radius-sm);
+  border-bottom-right-radius: var(--neo-border-radius-sm);
+}
+
+/* ==========================================================================
+   TAB CONTENT
+   ========================================================================== */
+
+.tab-content {
+  border: 1px solid var(--neo-color-border-primary);
+  border-top: none;
+  border-radius: 0 0 var(--neo-border-radius-md) var(--neo-border-radius-md);
+}
+
+.tab-pane {
+  display: none;
+  padding: var(--neo-space-4);
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.tab-pane.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.tab-pane.fade.show {
+  opacity: 1;
+}

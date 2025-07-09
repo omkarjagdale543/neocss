@@ -1,0 +1,320 @@
+/**
+ * NeoCSS Color Utilities
+ * 
+ * YAML Metadata:
+ * prompt: Complete remaining utility classes for global compatibility
+ * purpose: Comprehensive color utilities for backgrounds, borders, and text
+ * created: 2025-07-08
+ * features: background colors, border colors, text colors, opacity, gradients
+ */
+
+/* ==========================================================================
+   BACKGROUND COLORS - PRIMARY
+   ========================================================================== */
+
+.bg-primary { background-color: var(--neo-color-primary-500); }
+.bg-primary-50 { background-color: var(--neo-color-primary-50); }
+.bg-primary-100 { background-color: var(--neo-color-primary-100); }
+.bg-primary-200 { background-color: var(--neo-color-primary-200); }
+.bg-primary-300 { background-color: var(--neo-color-primary-300); }
+.bg-primary-400 { background-color: var(--neo-color-primary-400); }
+.bg-primary-500 { background-color: var(--neo-color-primary-500); }
+.bg-primary-600 { background-color: var(--neo-color-primary-600); }
+.bg-primary-700 { background-color: var(--neo-color-primary-700); }
+.bg-primary-800 { background-color: var(--neo-color-primary-800); }
+.bg-primary-900 { background-color: var(--neo-color-primary-900); }
+.bg-primary-950 { background-color: var(--neo-color-primary-950); }
+
+/* ==========================================================================
+   BACKGROUND COLORS - SECONDARY
+   ========================================================================== */
+
+.bg-secondary { background-color: var(--neo-color-secondary-500); }
+.bg-secondary-50 { background-color: var(--neo-color-secondary-50); }
+.bg-secondary-100 { background-color: var(--neo-color-secondary-100); }
+.bg-secondary-200 { background-color: var(--neo-color-secondary-200); }
+.bg-secondary-300 { background-color: var(--neo-color-secondary-300); }
+.bg-secondary-400 { background-color: var(--neo-color-secondary-400); }
+.bg-secondary-500 { background-color: var(--neo-color-secondary-500); }
+.bg-secondary-600 { background-color: var(--neo-color-secondary-600); }
+.bg-secondary-700 { background-color: var(--neo-color-secondary-700); }
+.bg-secondary-800 { background-color: var(--neo-color-secondary-800); }
+.bg-secondary-900 { background-color: var(--neo-color-secondary-900); }
+.bg-secondary-950 { background-color: var(--neo-color-secondary-950); }
+
+/* ==========================================================================
+   BACKGROUND COLORS - SEMANTIC
+   ========================================================================== */
+
+.bg-success { background-color: var(--neo-color-success-500); }
+.bg-success-50 { background-color: var(--neo-color-success-50); }
+.bg-success-100 { background-color: var(--neo-color-success-100); }
+.bg-success-200 { background-color: var(--neo-color-success-200); }
+.bg-success-300 { background-color: var(--neo-color-success-300); }
+.bg-success-400 { background-color: var(--neo-color-success-400); }
+.bg-success-500 { background-color: var(--neo-color-success-500); }
+.bg-success-600 { background-color: var(--neo-color-success-600); }
+.bg-success-700 { background-color: var(--neo-color-success-700); }
+.bg-success-800 { background-color: var(--neo-color-success-800); }
+.bg-success-900 { background-color: var(--neo-color-success-900); }
+
+.bg-warning { background-color: var(--neo-color-warning-500); }
+.bg-warning-50 { background-color: var(--neo-color-warning-50); }
+.bg-warning-100 { background-color: var(--neo-color-warning-100); }
+.bg-warning-200 { background-color: var(--neo-color-warning-200); }
+.bg-warning-300 { background-color: var(--neo-color-warning-300); }
+.bg-warning-400 { background-color: var(--neo-color-warning-400); }
+.bg-warning-500 { background-color: var(--neo-color-warning-500); }
+.bg-warning-600 { background-color: var(--neo-color-warning-600); }
+.bg-warning-700 { background-color: var(--neo-color-warning-700); }
+.bg-warning-800 { background-color: var(--neo-color-warning-800); }
+.bg-warning-900 { background-color: var(--neo-color-warning-900); }
+
+.bg-error { background-color: var(--neo-color-error-500); }
+.bg-error-50 { background-color: var(--neo-color-error-50); }
+.bg-error-100 { background-color: var(--neo-color-error-100); }
+.bg-error-200 { background-color: var(--neo-color-error-200); }
+.bg-error-300 { background-color: var(--neo-color-error-300); }
+.bg-error-400 { background-color: var(--neo-color-error-400); }
+.bg-error-500 { background-color: var(--neo-color-error-500); }
+.bg-error-600 { background-color: var(--neo-color-error-600); }
+.bg-error-700 { background-color: var(--neo-color-error-700); }
+.bg-error-800 { background-color: var(--neo-color-error-800); }
+.bg-error-900 { background-color: var(--neo-color-error-900); }
+
+.bg-info { background-color: var(--neo-color-info-500); }
+.bg-info-50 { background-color: var(--neo-color-info-50); }
+.bg-info-100 { background-color: var(--neo-color-info-100); }
+.bg-info-200 { background-color: var(--neo-color-info-200); }
+.bg-info-300 { background-color: var(--neo-color-info-300); }
+.bg-info-400 { background-color: var(--neo-color-info-400); }
+.bg-info-500 { background-color: var(--neo-color-info-500); }
+.bg-info-600 { background-color: var(--neo-color-info-600); }
+.bg-info-700 { background-color: var(--neo-color-info-700); }
+.bg-info-800 { background-color: var(--neo-color-info-800); }
+.bg-info-900 { background-color: var(--neo-color-info-900); }
+
+/* ==========================================================================
+   BACKGROUND COLORS - NEUTRAL
+   ========================================================================== */
+
+.bg-neutral { background-color: var(--neo-color-neutral-500); }
+.bg-neutral-50 { background-color: var(--neo-color-neutral-50); }
+.bg-neutral-100 { background-color: var(--neo-color-neutral-100); }
+.bg-neutral-200 { background-color: var(--neo-color-neutral-200); }
+.bg-neutral-300 { background-color: var(--neo-color-neutral-300); }
+.bg-neutral-400 { background-color: var(--neo-color-neutral-400); }
+.bg-neutral-500 { background-color: var(--neo-color-neutral-500); }
+.bg-neutral-600 { background-color: var(--neo-color-neutral-600); }
+.bg-neutral-700 { background-color: var(--neo-color-neutral-700); }
+.bg-neutral-800 { background-color: var(--neo-color-neutral-800); }
+.bg-neutral-900 { background-color: var(--neo-color-neutral-900); }
+.bg-neutral-950 { background-color: var(--neo-color-neutral-950); }
+
+/* ==========================================================================
+   BACKGROUND COLORS - SPECIAL
+   ========================================================================== */
+
+.bg-transparent { background-color: transparent; }
+.bg-current { background-color: currentColor; }
+.bg-inherit { background-color: inherit; }
+.bg-white { background-color: #ffffff; }
+.bg-black { background-color: #000000; }
+
+/* Theme-aware background colors */
+.bg-background-primary { background-color: var(--neo-color-background-primary); }
+.bg-background-secondary { background-color: var(--neo-color-background-secondary); }
+.bg-background-tertiary { background-color: var(--neo-color-background-tertiary); }
+.bg-background-inverse { background-color: var(--neo-color-background-inverse); }
+.bg-surface-primary { background-color: var(--neo-color-surface-primary); }
+.bg-surface-secondary { background-color: var(--neo-color-surface-secondary); }
+.bg-surface-raised { background-color: var(--neo-color-surface-raised); }
+.bg-surface-overlay { background-color: var(--neo-color-surface-overlay); }
+
+/* ==========================================================================
+   BORDER COLORS - PRIMARY
+   ========================================================================== */
+
+.border-primary { border-color: var(--neo-color-primary-500); }
+.border-primary-50 { border-color: var(--neo-color-primary-50); }
+.border-primary-100 { border-color: var(--neo-color-primary-100); }
+.border-primary-200 { border-color: var(--neo-color-primary-200); }
+.border-primary-300 { border-color: var(--neo-color-primary-300); }
+.border-primary-400 { border-color: var(--neo-color-primary-400); }
+.border-primary-500 { border-color: var(--neo-color-primary-500); }
+.border-primary-600 { border-color: var(--neo-color-primary-600); }
+.border-primary-700 { border-color: var(--neo-color-primary-700); }
+.border-primary-800 { border-color: var(--neo-color-primary-800); }
+.border-primary-900 { border-color: var(--neo-color-primary-900); }
+.border-primary-950 { border-color: var(--neo-color-primary-950); }
+
+/* ==========================================================================
+   BORDER COLORS - SECONDARY
+   ========================================================================== */
+
+.border-secondary { border-color: var(--neo-color-secondary-500); }
+.border-secondary-50 { border-color: var(--neo-color-secondary-50); }
+.border-secondary-100 { border-color: var(--neo-color-secondary-100); }
+.border-secondary-200 { border-color: var(--neo-color-secondary-200); }
+.border-secondary-300 { border-color: var(--neo-color-secondary-300); }
+.border-secondary-400 { border-color: var(--neo-color-secondary-400); }
+.border-secondary-500 { border-color: var(--neo-color-secondary-500); }
+.border-secondary-600 { border-color: var(--neo-color-secondary-600); }
+.border-secondary-700 { border-color: var(--neo-color-secondary-700); }
+.border-secondary-800 { border-color: var(--neo-color-secondary-800); }
+.border-secondary-900 { border-color: var(--neo-color-secondary-900); }
+.border-secondary-950 { border-color: var(--neo-color-secondary-950); }
+
+/* ==========================================================================
+   BORDER COLORS - SEMANTIC
+   ========================================================================== */
+
+.border-success { border-color: var(--neo-color-success-500); }
+.border-success-50 { border-color: var(--neo-color-success-50); }
+.border-success-100 { border-color: var(--neo-color-success-100); }
+.border-success-200 { border-color: var(--neo-color-success-200); }
+.border-success-300 { border-color: var(--neo-color-success-300); }
+.border-success-400 { border-color: var(--neo-color-success-400); }
+.border-success-500 { border-color: var(--neo-color-success-500); }
+.border-success-600 { border-color: var(--neo-color-success-600); }
+.border-success-700 { border-color: var(--neo-color-success-700); }
+.border-success-800 { border-color: var(--neo-color-success-800); }
+.border-success-900 { border-color: var(--neo-color-success-900); }
+
+.border-warning { border-color: var(--neo-color-warning-500); }
+.border-warning-50 { border-color: var(--neo-color-warning-50); }
+.border-warning-100 { border-color: var(--neo-color-warning-100); }
+.border-warning-200 { border-color: var(--neo-color-warning-200); }
+.border-warning-300 { border-color: var(--neo-color-warning-300); }
+.border-warning-400 { border-color: var(--neo-color-warning-400); }
+.border-warning-500 { border-color: var(--neo-color-warning-500); }
+.border-warning-600 { border-color: var(--neo-color-warning-600); }
+.border-warning-700 { border-color: var(--neo-color-warning-700); }
+.border-warning-800 { border-color: var(--neo-color-warning-800); }
+.border-warning-900 { border-color: var(--neo-color-warning-900); }
+
+.border-error { border-color: var(--neo-color-error-500); }
+.border-error-50 { border-color: var(--neo-color-error-50); }
+.border-error-100 { border-color: var(--neo-color-error-100); }
+.border-error-200 { border-color: var(--neo-color-error-200); }
+.border-error-300 { border-color: var(--neo-color-error-300); }
+.border-error-400 { border-color: var(--neo-color-error-400); }
+.border-error-500 { border-color: var(--neo-color-error-500); }
+.border-error-600 { border-color: var(--neo-color-error-600); }
+.border-error-700 { border-color: var(--neo-color-error-700); }
+.border-error-800 { border-color: var(--neo-color-error-800); }
+.border-error-900 { border-color: var(--neo-color-error-900); }
+
+.border-info { border-color: var(--neo-color-info-500); }
+.border-info-50 { border-color: var(--neo-color-info-50); }
+.border-info-100 { border-color: var(--neo-color-info-100); }
+.border-info-200 { border-color: var(--neo-color-info-200); }
+.border-info-300 { border-color: var(--neo-color-info-300); }
+.border-info-400 { border-color: var(--neo-color-info-400); }
+.border-info-500 { border-color: var(--neo-color-info-500); }
+.border-info-600 { border-color: var(--neo-color-info-600); }
+.border-info-700 { border-color: var(--neo-color-info-700); }
+.border-info-800 { border-color: var(--neo-color-info-800); }
+.border-info-900 { border-color: var(--neo-color-info-900); }
+
+/* ==========================================================================
+   BORDER COLORS - NEUTRAL
+   ========================================================================== */
+
+.border-neutral { border-color: var(--neo-color-neutral-500); }
+.border-neutral-50 { border-color: var(--neo-color-neutral-50); }
+.border-neutral-100 { border-color: var(--neo-color-neutral-100); }
+.border-neutral-200 { border-color: var(--neo-color-neutral-200); }
+.border-neutral-300 { border-color: var(--neo-color-neutral-300); }
+.border-neutral-400 { border-color: var(--neo-color-neutral-400); }
+.border-neutral-500 { border-color: var(--neo-color-neutral-500); }
+.border-neutral-600 { border-color: var(--neo-color-neutral-600); }
+.border-neutral-700 { border-color: var(--neo-color-neutral-700); }
+.border-neutral-800 { border-color: var(--neo-color-neutral-800); }
+.border-neutral-900 { border-color: var(--neo-color-neutral-900); }
+.border-neutral-950 { border-color: var(--neo-color-neutral-950); }
+
+/* ==========================================================================
+   BORDER COLORS - SPECIAL
+   ========================================================================== */
+
+.border-transparent { border-color: transparent; }
+.border-current { border-color: currentColor; }
+.border-inherit { border-color: inherit; }
+.border-white { border-color: #ffffff; }
+.border-black { border-color: #000000; }
+
+/* Theme-aware border colors */
+.border-border-primary { border-color: var(--neo-color-border-primary); }
+.border-border-secondary { border-color: var(--neo-color-border-secondary); }
+.border-border-focus { border-color: var(--neo-color-border-focus); }
+
+/* ==========================================================================
+   OPACITY
+   ========================================================================== */
+
+.opacity-0 { opacity: 0; }
+.opacity-5 { opacity: 0.05; }
+.opacity-10 { opacity: 0.1; }
+.opacity-15 { opacity: 0.15; }
+.opacity-20 { opacity: 0.2; }
+.opacity-25 { opacity: 0.25; }
+.opacity-30 { opacity: 0.3; }
+.opacity-35 { opacity: 0.35; }
+.opacity-40 { opacity: 0.4; }
+.opacity-45 { opacity: 0.45; }
+.opacity-50 { opacity: 0.5; }
+.opacity-55 { opacity: 0.55; }
+.opacity-60 { opacity: 0.6; }
+.opacity-65 { opacity: 0.65; }
+.opacity-70 { opacity: 0.7; }
+.opacity-75 { opacity: 0.75; }
+.opacity-80 { opacity: 0.8; }
+.opacity-85 { opacity: 0.85; }
+.opacity-90 { opacity: 0.9; }
+.opacity-95 { opacity: 0.95; }
+.opacity-100 { opacity: 1; }
+
+/* ==========================================================================
+   MIX BLEND MODE
+   ========================================================================== */
+
+.mix-blend-normal { mix-blend-mode: normal; }
+.mix-blend-multiply { mix-blend-mode: multiply; }
+.mix-blend-screen { mix-blend-mode: screen; }
+.mix-blend-overlay { mix-blend-mode: overlay; }
+.mix-blend-darken { mix-blend-mode: darken; }
+.mix-blend-lighten { mix-blend-mode: lighten; }
+.mix-blend-color-dodge { mix-blend-mode: color-dodge; }
+.mix-blend-color-burn { mix-blend-mode: color-burn; }
+.mix-blend-hard-light { mix-blend-mode: hard-light; }
+.mix-blend-soft-light { mix-blend-mode: soft-light; }
+.mix-blend-difference { mix-blend-mode: difference; }
+.mix-blend-exclusion { mix-blend-mode: exclusion; }
+.mix-blend-hue { mix-blend-mode: hue; }
+.mix-blend-saturation { mix-blend-mode: saturation; }
+.mix-blend-color { mix-blend-mode: color; }
+.mix-blend-luminosity { mix-blend-mode: luminosity; }
+.mix-blend-plus-darker { mix-blend-mode: plus-darker; }
+.mix-blend-plus-lighter { mix-blend-mode: plus-lighter; }
+
+/* ==========================================================================
+   BACKGROUND BLEND MODE
+   ========================================================================== */
+
+.bg-blend-normal { background-blend-mode: normal; }
+.bg-blend-multiply { background-blend-mode: multiply; }
+.bg-blend-screen { background-blend-mode: screen; }
+.bg-blend-overlay { background-blend-mode: overlay; }
+.bg-blend-darken { background-blend-mode: darken; }
+.bg-blend-lighten { background-blend-mode: lighten; }
+.bg-blend-color-dodge { background-blend-mode: color-dodge; }
+.bg-blend-color-burn { background-blend-mode: color-burn; }
+.bg-blend-hard-light { background-blend-mode: hard-light; }
+.bg-blend-soft-light { background-blend-mode: soft-light; }
+.bg-blend-difference { background-blend-mode: difference; }
+.bg-blend-exclusion { background-blend-mode: exclusion; }
+.bg-blend-hue { background-blend-mode: hue; }
+.bg-blend-saturation { background-blend-mode: saturation; }
+.bg-blend-color { background-blend-mode: color; }
+.bg-blend-luminosity { background-blend-mode: luminosity; }

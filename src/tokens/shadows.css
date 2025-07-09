@@ -1,0 +1,128 @@
+/**
+ * NeoCSS Shadow Design Tokens
+ * 
+ * YAML Metadata:
+ * prompt: Design token system development
+ * purpose: Define shadow system for depth and elevation
+ * created: 2025-07-08
+ * features: elevation scale, colored shadows, component shadows
+ */
+
+:root {
+  /* ==========================================================================
+     SHADOW SCALE
+     ========================================================================== */
+  
+  /* Base shadow scale for elevation */
+  --neo-shadow-none: none;
+  --neo-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --neo-shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --neo-shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --neo-shadow-xl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --neo-shadow-2xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --neo-shadow-3xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Inner shadows */
+  --neo-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --neo-shadow-inner-lg: inset 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+  /* ==========================================================================
+     COLORED SHADOWS
+     ========================================================================== */
+  
+  /* Primary colored shadows */
+  --neo-shadow-primary-sm: 0 1px 2px 0 rgba(59, 130, 246, 0.15);
+  --neo-shadow-primary-md: 0 4px 6px -1px rgba(59, 130, 246, 0.15), 0 2px 4px -2px rgba(59, 130, 246, 0.15);
+  --neo-shadow-primary-lg: 0 10px 15px -3px rgba(59, 130, 246, 0.15), 0 4px 6px -4px rgba(59, 130, 246, 0.15);
+
+  /* Success colored shadows */
+  --neo-shadow-success-sm: 0 1px 2px 0 rgba(34, 197, 94, 0.15);
+  --neo-shadow-success-md: 0 4px 6px -1px rgba(34, 197, 94, 0.15), 0 2px 4px -2px rgba(34, 197, 94, 0.15);
+  --neo-shadow-success-lg: 0 10px 15px -3px rgba(34, 197, 94, 0.15), 0 4px 6px -4px rgba(34, 197, 94, 0.15);
+
+  /* Warning colored shadows */
+  --neo-shadow-warning-sm: 0 1px 2px 0 rgba(245, 158, 11, 0.15);
+  --neo-shadow-warning-md: 0 4px 6px -1px rgba(245, 158, 11, 0.15), 0 2px 4px -2px rgba(245, 158, 11, 0.15);
+  --neo-shadow-warning-lg: 0 10px 15px -3px rgba(245, 158, 11, 0.15), 0 4px 6px -4px rgba(245, 158, 11, 0.15);
+
+  /* Error colored shadows */
+  --neo-shadow-error-sm: 0 1px 2px 0 rgba(239, 68, 68, 0.15);
+  --neo-shadow-error-md: 0 4px 6px -1px rgba(239, 68, 68, 0.15), 0 2px 4px -2px rgba(239, 68, 68, 0.15);
+  --neo-shadow-error-lg: 0 10px 15px -3px rgba(239, 68, 68, 0.15), 0 4px 6px -4px rgba(239, 68, 68, 0.15);
+
+  /* ==========================================================================
+     COMPONENT SHADOWS
+     ========================================================================== */
+  
+  /* Button shadows */
+  --neo-shadow-button: var(--neo-shadow-sm);
+  --neo-shadow-button-hover: var(--neo-shadow-md);
+  --neo-shadow-button-active: var(--neo-shadow-inner);
+  --neo-shadow-button-focus: 0 0 0 3px rgba(59, 130, 246, 0.1);
+
+  /* Card shadows */
+  --neo-shadow-card: var(--neo-shadow-md);
+  --neo-shadow-card-hover: var(--neo-shadow-lg);
+  --neo-shadow-card-raised: var(--neo-shadow-xl);
+
+  /* Modal shadows */
+  --neo-shadow-modal: var(--neo-shadow-2xl);
+  --neo-shadow-modal-backdrop: rgba(0, 0, 0, 0.5);
+
+  /* Dropdown shadows */
+  --neo-shadow-dropdown: var(--neo-shadow-lg);
+  --neo-shadow-dropdown-lg: var(--neo-shadow-xl);
+
+  /* Tooltip shadows */
+  --neo-shadow-tooltip: var(--neo-shadow-md);
+
+  /* Form shadows */
+  --neo-shadow-input: var(--neo-shadow-inner);
+  --neo-shadow-input-focus: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  --neo-shadow-input-error: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  --neo-shadow-input-success: 0 0 0 3px rgba(34, 197, 94, 0.1);
+
+  /* Navigation shadows */
+  --neo-shadow-nav: var(--neo-shadow-sm);
+  --neo-shadow-nav-sticky: var(--neo-shadow-md);
+
+  /* ==========================================================================
+     ELEVATION SYSTEM
+     ========================================================================== */
+  
+  /* Semantic elevation levels */
+  --neo-elevation-0: var(--neo-shadow-none);     /* Ground level */
+  --neo-elevation-1: var(--neo-shadow-sm);       /* Slightly raised */
+  --neo-elevation-2: var(--neo-shadow-md);       /* Cards, buttons */
+  --neo-elevation-3: var(--neo-shadow-lg);       /* Dropdowns, tooltips */
+  --neo-elevation-4: var(--neo-shadow-xl);       /* Modals, overlays */
+  --neo-elevation-5: var(--neo-shadow-2xl);      /* High priority overlays */
+  --neo-elevation-6: var(--neo-shadow-3xl);      /* Maximum elevation */
+
+  /* ==========================================================================
+     FOCUS SHADOWS
+     ========================================================================== */
+  
+  /* Focus ring system */
+  --neo-focus-ring-width: 3px;
+  --neo-focus-ring-offset: 2px;
+  --neo-focus-ring-color: rgba(59, 130, 246, 0.5);
+  --neo-focus-ring-shadow: 0 0 0 var(--neo-focus-ring-offset) var(--neo-color-background-primary), 
+                           0 0 0 calc(var(--neo-focus-ring-width) + var(--neo-focus-ring-offset)) var(--neo-focus-ring-color);
+
+  /* Component-specific focus rings */
+  --neo-focus-button: var(--neo-focus-ring-shadow);
+  --neo-focus-input: 0 0 0 var(--neo-focus-ring-width) var(--neo-focus-ring-color);
+  --neo-focus-link: var(--neo-focus-ring-shadow);
+
+  /* ==========================================================================
+     GLOW EFFECTS
+     ========================================================================== */
+  
+  /* Subtle glow effects for interactive elements */
+  --neo-glow-primary: 0 0 20px rgba(59, 130, 246, 0.3);
+  --neo-glow-success: 0 0 20px rgba(34, 197, 94, 0.3);
+  --neo-glow-warning: 0 0 20px rgba(245, 158, 11, 0.3);
+  --neo-glow-error: 0 0 20px rgba(239, 68, 68, 0.3);
+  --neo-glow-info: 0 0 20px rgba(14, 165, 233, 0.3);
+}

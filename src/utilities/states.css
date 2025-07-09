@@ -1,0 +1,285 @@
+/**
+ * NeoCSS State Utilities
+ * 
+ * YAML Metadata:
+ * prompt: Complete remaining utility classes for global compatibility
+ * purpose: Interactive state utilities for hover, focus, active, disabled, etc.
+ * created: 2025-07-08
+ * features: pseudo-classes, pseudo-elements, interaction states, accessibility
+ */
+
+/* ==========================================================================
+   HOVER STATES
+   ========================================================================== */
+
+.hover\:bg-primary:hover { background-color: var(--neo-color-primary-500); }
+.hover\:bg-primary-50:hover { background-color: var(--neo-color-primary-50); }
+.hover\:bg-primary-100:hover { background-color: var(--neo-color-primary-100); }
+.hover\:bg-primary-200:hover { background-color: var(--neo-color-primary-200); }
+.hover\:bg-primary-300:hover { background-color: var(--neo-color-primary-300); }
+.hover\:bg-primary-400:hover { background-color: var(--neo-color-primary-400); }
+.hover\:bg-primary-500:hover { background-color: var(--neo-color-primary-500); }
+.hover\:bg-primary-600:hover { background-color: var(--neo-color-primary-600); }
+.hover\:bg-primary-700:hover { background-color: var(--neo-color-primary-700); }
+.hover\:bg-primary-800:hover { background-color: var(--neo-color-primary-800); }
+.hover\:bg-primary-900:hover { background-color: var(--neo-color-primary-900); }
+
+.hover\:bg-secondary:hover { background-color: var(--neo-color-secondary-500); }
+.hover\:bg-secondary-50:hover { background-color: var(--neo-color-secondary-50); }
+.hover\:bg-secondary-100:hover { background-color: var(--neo-color-secondary-100); }
+.hover\:bg-secondary-200:hover { background-color: var(--neo-color-secondary-200); }
+.hover\:bg-secondary-300:hover { background-color: var(--neo-color-secondary-300); }
+.hover\:bg-secondary-400:hover { background-color: var(--neo-color-secondary-400); }
+.hover\:bg-secondary-500:hover { background-color: var(--neo-color-secondary-500); }
+.hover\:bg-secondary-600:hover { background-color: var(--neo-color-secondary-600); }
+.hover\:bg-secondary-700:hover { background-color: var(--neo-color-secondary-700); }
+.hover\:bg-secondary-800:hover { background-color: var(--neo-color-secondary-800); }
+.hover\:bg-secondary-900:hover { background-color: var(--neo-color-secondary-900); }
+
+.hover\:text-primary:hover { color: var(--neo-color-primary-500); }
+.hover\:text-primary-600:hover { color: var(--neo-color-primary-600); }
+.hover\:text-primary-700:hover { color: var(--neo-color-primary-700); }
+.hover\:text-secondary:hover { color: var(--neo-color-secondary-500); }
+.hover\:text-secondary-600:hover { color: var(--neo-color-secondary-600); }
+.hover\:text-secondary-700:hover { color: var(--neo-color-secondary-700); }
+.hover\:text-white:hover { color: #ffffff; }
+.hover\:text-black:hover { color: #000000; }
+
+.hover\:border-primary:hover { border-color: var(--neo-color-primary-500); }
+.hover\:border-primary-600:hover { border-color: var(--neo-color-primary-600); }
+.hover\:border-primary-700:hover { border-color: var(--neo-color-primary-700); }
+.hover\:border-secondary:hover { border-color: var(--neo-color-secondary-500); }
+.hover\:border-secondary-600:hover { border-color: var(--neo-color-secondary-600); }
+.hover\:border-secondary-700:hover { border-color: var(--neo-color-secondary-700); }
+
+.hover\:opacity-0:hover { opacity: 0; }
+.hover\:opacity-25:hover { opacity: 0.25; }
+.hover\:opacity-50:hover { opacity: 0.5; }
+.hover\:opacity-75:hover { opacity: 0.75; }
+.hover\:opacity-100:hover { opacity: 1; }
+
+.hover\:shadow-sm:hover { box-shadow: var(--neo-shadow-sm); }
+.hover\:shadow:hover { box-shadow: var(--neo-shadow-md); }
+.hover\:shadow-md:hover { box-shadow: var(--neo-shadow-md); }
+.hover\:shadow-lg:hover { box-shadow: var(--neo-shadow-lg); }
+.hover\:shadow-xl:hover { box-shadow: var(--neo-shadow-xl); }
+.hover\:shadow-2xl:hover { box-shadow: var(--neo-shadow-2xl); }
+.hover\:shadow-none:hover { box-shadow: none; }
+
+.hover\:scale-95:hover { transform: scale(0.95); }
+.hover\:scale-100:hover { transform: scale(1); }
+.hover\:scale-105:hover { transform: scale(1.05); }
+.hover\:scale-110:hover { transform: scale(1.1); }
+
+.hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+.hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
+.hover\:translate-y-0:hover { transform: translateY(0); }
+
+/* ==========================================================================
+   FOCUS STATES
+   ========================================================================== */
+
+.focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+.focus\:outline:focus { outline-style: solid; }
+.focus\:outline-dashed:focus { outline-style: dashed; }
+.focus\:outline-dotted:focus { outline-style: dotted; }
+
+.focus\:outline-0:focus { outline-width: 0px; }
+.focus\:outline-1:focus { outline-width: 1px; }
+.focus\:outline-2:focus { outline-width: 2px; }
+.focus\:outline-4:focus { outline-width: 4px; }
+.focus\:outline-8:focus { outline-width: 8px; }
+
+.focus\:outline-primary:focus { outline-color: var(--neo-color-primary-500); }
+.focus\:outline-secondary:focus { outline-color: var(--neo-color-secondary-500); }
+.focus\:outline-white:focus { outline-color: #ffffff; }
+.focus\:outline-black:focus { outline-color: #000000; }
+
+.focus\:ring:focus { box-shadow: var(--neo-focus-ring-shadow); }
+.focus\:ring-0:focus { box-shadow: none; }
+.focus\:ring-1:focus { box-shadow: 0 0 0 1px var(--neo-focus-ring-color); }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--neo-focus-ring-color); }
+.focus\:ring-4:focus { box-shadow: 0 0 0 4px var(--neo-focus-ring-color); }
+.focus\:ring-8:focus { box-shadow: 0 0 0 8px var(--neo-focus-ring-color); }
+
+.focus\:ring-primary:focus { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); }
+.focus\:ring-secondary:focus { box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.5); }
+.focus\:ring-success:focus { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.5); }
+.focus\:ring-warning:focus { box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5); }
+.focus\:ring-error:focus { box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5); }
+
+.focus\:bg-primary:focus { background-color: var(--neo-color-primary-500); }
+.focus\:bg-secondary:focus { background-color: var(--neo-color-secondary-500); }
+.focus\:text-primary:focus { color: var(--neo-color-primary-500); }
+.focus\:text-secondary:focus { color: var(--neo-color-secondary-500); }
+.focus\:border-primary:focus { border-color: var(--neo-color-primary-500); }
+.focus\:border-secondary:focus { border-color: var(--neo-color-secondary-500); }
+
+/* ==========================================================================
+   ACTIVE STATES
+   ========================================================================== */
+
+.active\:bg-primary:active { background-color: var(--neo-color-primary-500); }
+.active\:bg-primary-600:active { background-color: var(--neo-color-primary-600); }
+.active\:bg-primary-700:active { background-color: var(--neo-color-primary-700); }
+.active\:bg-secondary:active { background-color: var(--neo-color-secondary-500); }
+.active\:bg-secondary-600:active { background-color: var(--neo-color-secondary-600); }
+.active\:bg-secondary-700:active { background-color: var(--neo-color-secondary-700); }
+
+.active\:text-primary:active { color: var(--neo-color-primary-500); }
+.active\:text-secondary:active { color: var(--neo-color-secondary-500); }
+.active\:text-white:active { color: #ffffff; }
+.active\:text-black:active { color: #000000; }
+
+.active\:border-primary:active { border-color: var(--neo-color-primary-500); }
+.active\:border-secondary:active { border-color: var(--neo-color-secondary-500); }
+
+.active\:scale-95:active { transform: scale(0.95); }
+.active\:scale-100:active { transform: scale(1); }
+
+.active\:shadow-inner:active { box-shadow: var(--neo-shadow-inner); }
+.active\:shadow-none:active { box-shadow: none; }
+
+/* ==========================================================================
+   DISABLED STATES
+   ========================================================================== */
+
+.disabled\:opacity-50:disabled { opacity: 0.5; }
+.disabled\:opacity-75:disabled { opacity: 0.75; }
+.disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
+.disabled\:pointer-events-none:disabled { pointer-events: none; }
+
+.disabled\:bg-neutral-100:disabled { background-color: var(--neo-color-neutral-100); }
+.disabled\:bg-neutral-200:disabled { background-color: var(--neo-color-neutral-200); }
+.disabled\:text-neutral-400:disabled { color: var(--neo-color-neutral-400); }
+.disabled\:text-neutral-500:disabled { color: var(--neo-color-neutral-500); }
+.disabled\:border-neutral-200:disabled { border-color: var(--neo-color-neutral-200); }
+.disabled\:border-neutral-300:disabled { border-color: var(--neo-color-neutral-300); }
+
+/* ==========================================================================
+   VISITED STATES
+   ========================================================================== */
+
+.visited\:text-primary:visited { color: var(--neo-color-primary-700); }
+.visited\:text-secondary:visited { color: var(--neo-color-secondary-700); }
+.visited\:text-purple-600:visited { color: #9333ea; }
+
+/* ==========================================================================
+   CHECKED STATES
+   ========================================================================== */
+
+.checked\:bg-primary:checked { background-color: var(--neo-color-primary-500); }
+.checked\:bg-secondary:checked { background-color: var(--neo-color-secondary-500); }
+.checked\:text-white:checked { color: #ffffff; }
+.checked\:border-primary:checked { border-color: var(--neo-color-primary-500); }
+.checked\:border-secondary:checked { border-color: var(--neo-color-secondary-500); }
+
+/* ==========================================================================
+   INDETERMINATE STATES
+   ========================================================================== */
+
+.indeterminate\:bg-primary:indeterminate { background-color: var(--neo-color-primary-500); }
+.indeterminate\:bg-secondary:indeterminate { background-color: var(--neo-color-secondary-500); }
+.indeterminate\:text-white:indeterminate { color: #ffffff; }
+.indeterminate\:border-primary:indeterminate { border-color: var(--neo-color-primary-500); }
+
+/* ==========================================================================
+   PLACEHOLDER STATES
+   ========================================================================== */
+
+.placeholder\:text-neutral-400::placeholder { color: var(--neo-color-neutral-400); }
+.placeholder\:text-neutral-500::placeholder { color: var(--neo-color-neutral-500); }
+.placeholder\:text-neutral-600::placeholder { color: var(--neo-color-neutral-600); }
+.placeholder\:opacity-50::placeholder { opacity: 0.5; }
+.placeholder\:opacity-75::placeholder { opacity: 0.75; }
+.placeholder\:opacity-100::placeholder { opacity: 1; }
+
+/* ==========================================================================
+   SELECTION STATES
+   ========================================================================== */
+
+.selection\:bg-primary::selection { background-color: var(--neo-color-primary-200); }
+.selection\:bg-secondary::selection { background-color: var(--neo-color-secondary-200); }
+.selection\:text-primary::selection { color: var(--neo-color-primary-900); }
+.selection\:text-secondary::selection { color: var(--neo-color-secondary-900); }
+.selection\:text-white::selection { color: #ffffff; }
+.selection\:text-black::selection { color: #000000; }
+
+/* ==========================================================================
+   FIRST/LAST CHILD STATES
+   ========================================================================== */
+
+.first\:border-t-0:first-child { border-top-width: 0; }
+.first\:border-l-0:first-child { border-left-width: 0; }
+.first\:rounded-t-lg:first-child { border-top-left-radius: var(--neo-border-radius-lg); border-top-right-radius: var(--neo-border-radius-lg); }
+.first\:rounded-l-lg:first-child { border-top-left-radius: var(--neo-border-radius-lg); border-bottom-left-radius: var(--neo-border-radius-lg); }
+
+.last\:border-b-0:last-child { border-bottom-width: 0; }
+.last\:border-r-0:last-child { border-right-width: 0; }
+.last\:rounded-b-lg:last-child { border-bottom-left-radius: var(--neo-border-radius-lg); border-bottom-right-radius: var(--neo-border-radius-lg); }
+.last\:rounded-r-lg:last-child { border-top-right-radius: var(--neo-border-radius-lg); border-bottom-right-radius: var(--neo-border-radius-lg); }
+
+/* ==========================================================================
+   ODD/EVEN CHILD STATES
+   ========================================================================== */
+
+.odd\:bg-neutral-50:nth-child(odd) { background-color: var(--neo-color-neutral-50); }
+.odd\:bg-neutral-100:nth-child(odd) { background-color: var(--neo-color-neutral-100); }
+.even\:bg-neutral-100:nth-child(even) { background-color: var(--neo-color-neutral-100); }
+.even\:bg-neutral-200:nth-child(even) { background-color: var(--neo-color-neutral-200); }
+
+/* ==========================================================================
+   GROUP STATES
+   ========================================================================== */
+
+.group:hover .group-hover\:block { display: block; }
+.group:hover .group-hover\:hidden { display: none; }
+.group:hover .group-hover\:opacity-100 { opacity: 1; }
+.group:hover .group-hover\:opacity-0 { opacity: 0; }
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+.group:hover .group-hover\:scale-100 { transform: scale(1); }
+.group:hover .group-hover\:-translate-y-1 { transform: translateY(-0.25rem); }
+.group:hover .group-hover\:translate-y-0 { transform: translateY(0); }
+
+.group:focus .group-focus\:block { display: block; }
+.group:focus .group-focus\:hidden { display: none; }
+.group:focus .group-focus\:opacity-100 { opacity: 1; }
+.group:focus .group-focus\:opacity-0 { opacity: 0; }
+
+/* ==========================================================================
+   PEER STATES
+   ========================================================================== */
+
+.peer:hover ~ .peer-hover\:block { display: block; }
+.peer:hover ~ .peer-hover\:hidden { display: none; }
+.peer:hover ~ .peer-hover\:opacity-100 { opacity: 1; }
+.peer:hover ~ .peer-hover\:opacity-0 { opacity: 0; }
+
+.peer:focus ~ .peer-focus\:block { display: block; }
+.peer:focus ~ .peer-focus\:hidden { display: none; }
+.peer:focus ~ .peer-focus\:opacity-100 { opacity: 1; }
+.peer:focus ~ .peer-focus\:opacity-0 { opacity: 0; }
+
+.peer:checked ~ .peer-checked\:block { display: block; }
+.peer:checked ~ .peer-checked\:hidden { display: none; }
+.peer:checked ~ .peer-checked\:bg-primary { background-color: var(--neo-color-primary-500); }
+.peer:checked ~ .peer-checked\:text-white { color: #ffffff; }
+
+.peer:disabled ~ .peer-disabled\:opacity-50 { opacity: 0.5; }
+.peer:disabled ~ .peer-disabled\:cursor-not-allowed { cursor: not-allowed; }
+
+/* ==========================================================================
+   ARIA STATES
+   ========================================================================== */
+
+.aria-expanded\:rotate-180[aria-expanded="true"] { transform: rotate(180deg); }
+.aria-expanded\:rotate-0[aria-expanded="false"] { transform: rotate(0deg); }
+
+.aria-selected\:bg-primary[aria-selected="true"] { background-color: var(--neo-color-primary-500); }
+.aria-selected\:text-white[aria-selected="true"] { color: #ffffff; }
+
+.aria-pressed\:bg-primary[aria-pressed="true"] { background-color: var(--neo-color-primary-500); }
+.aria-pressed\:text-white[aria-pressed="true"] { color: #ffffff; }
+
+.aria-current\:bg-primary[aria-current="page"] { background-color: var(--neo-color-primary-500); }
+.aria-current\:text-white[aria-current="page"] { color: #ffffff; }

@@ -1,0 +1,150 @@
+/**
+ * NeoCSS Spacing Design Tokens
+ * 
+ * YAML Metadata:
+ * prompt: Design token system development
+ * purpose: Define spacing scale using CSS custom properties for consistent layouts
+ * created: 2025-07-08
+ * features: rem-based scale, component spacing, responsive spacing
+ */
+
+:root {
+  /* ==========================================================================
+     BASE SPACING SCALE
+     ========================================================================== */
+  
+  /* Core spacing scale (rem-based for accessibility) */
+  --neo-space-0: 0;
+  --neo-space-px: 1px;
+  --neo-space-0-5: 0.125rem;  /* 2px */
+  --neo-space-1: 0.25rem;     /* 4px */
+  --neo-space-1-5: 0.375rem;  /* 6px */
+  --neo-space-2: 0.5rem;      /* 8px */
+  --neo-space-2-5: 0.625rem;  /* 10px */
+  --neo-space-3: 0.75rem;     /* 12px */
+  --neo-space-3-5: 0.875rem;  /* 14px */
+  --neo-space-4: 1rem;        /* 16px */
+  --neo-space-5: 1.25rem;     /* 20px */
+  --neo-space-6: 1.5rem;      /* 24px */
+  --neo-space-7: 1.75rem;     /* 28px */
+  --neo-space-8: 2rem;        /* 32px */
+  --neo-space-9: 2.25rem;     /* 36px */
+  --neo-space-10: 2.5rem;     /* 40px */
+  --neo-space-11: 2.75rem;    /* 44px */
+  --neo-space-12: 3rem;       /* 48px */
+  --neo-space-14: 3.5rem;     /* 56px */
+  --neo-space-16: 4rem;       /* 64px */
+  --neo-space-20: 5rem;       /* 80px */
+  --neo-space-24: 6rem;       /* 96px */
+  --neo-space-28: 7rem;       /* 112px */
+  --neo-space-32: 8rem;       /* 128px */
+  --neo-space-36: 9rem;       /* 144px */
+  --neo-space-40: 10rem;      /* 160px */
+  --neo-space-44: 11rem;      /* 176px */
+  --neo-space-48: 12rem;      /* 192px */
+  --neo-space-52: 13rem;      /* 208px */
+  --neo-space-56: 14rem;      /* 224px */
+  --neo-space-60: 15rem;      /* 240px */
+  --neo-space-64: 16rem;      /* 256px */
+  --neo-space-72: 18rem;      /* 288px */
+  --neo-space-80: 20rem;      /* 320px */
+  --neo-space-96: 24rem;      /* 384px */
+
+  /* ==========================================================================
+     SEMANTIC SPACING ALIASES
+     ========================================================================== */
+  
+  /* Component spacing */
+  --neo-space-xs: var(--neo-space-1);    /* Extra small: 4px */
+  --neo-space-sm: var(--neo-space-2);    /* Small: 8px */
+  --neo-space-md: var(--neo-space-4);    /* Medium: 16px */
+  --neo-space-lg: var(--neo-space-6);    /* Large: 24px */
+  --neo-space-xl: var(--neo-space-8);    /* Extra large: 32px */
+  --neo-space-2xl: var(--neo-space-12);  /* 2X large: 48px */
+  --neo-space-3xl: var(--neo-space-16);  /* 3X large: 64px */
+
+  /* Layout spacing */
+  --neo-space-section: var(--neo-space-16);     /* Section spacing: 64px */
+  --neo-space-container: var(--neo-space-6);    /* Container padding: 24px */
+  --neo-space-gutter: var(--neo-space-4);       /* Grid gutter: 16px */
+
+  /* ==========================================================================
+     COMPONENT-SPECIFIC SPACING
+     ========================================================================== */
+  
+  /* Button spacing */
+  --neo-space-button-padding-x-sm: var(--neo-space-3);   /* 12px */
+  --neo-space-button-padding-y-sm: var(--neo-space-1-5); /* 6px */
+  --neo-space-button-padding-x-md: var(--neo-space-4);   /* 16px */
+  --neo-space-button-padding-y-md: var(--neo-space-2);   /* 8px */
+  --neo-space-button-padding-x-lg: var(--neo-space-6);   /* 24px */
+  --neo-space-button-padding-y-lg: var(--neo-space-3);   /* 12px */
+  --neo-space-button-gap: var(--neo-space-2);            /* 8px */
+
+  /* Card spacing */
+  --neo-space-card-padding: var(--neo-space-6);          /* 24px */
+  --neo-space-card-header-padding: var(--neo-space-4);   /* 16px */
+  --neo-space-card-body-padding: var(--neo-space-6);     /* 24px */
+  --neo-space-card-footer-padding: var(--neo-space-4);   /* 16px */
+  --neo-space-card-gap: var(--neo-space-4);              /* 16px */
+
+  /* Form spacing */
+  --neo-space-form-group-gap: var(--neo-space-4);        /* 16px */
+  --neo-space-form-label-gap: var(--neo-space-1);        /* 4px */
+  --neo-space-input-padding-x: var(--neo-space-3);       /* 12px */
+  --neo-space-input-padding-y: var(--neo-space-2);       /* 8px */
+  --neo-space-form-help-gap: var(--neo-space-1);         /* 4px */
+
+  /* Modal spacing */
+  --neo-space-modal-padding: var(--neo-space-6);         /* 24px */
+  --neo-space-modal-header-padding: var(--neo-space-6);  /* 24px */
+  --neo-space-modal-body-padding: var(--neo-space-6);    /* 24px */
+  --neo-space-modal-footer-padding: var(--neo-space-6);  /* 24px */
+  --neo-space-modal-gap: var(--neo-space-4);             /* 16px */
+
+  /* Navigation spacing */
+  --neo-space-nav-padding-x: var(--neo-space-4);         /* 16px */
+  --neo-space-nav-padding-y: var(--neo-space-2);         /* 8px */
+  --neo-space-nav-item-gap: var(--neo-space-1);          /* 4px */
+  --neo-space-nav-dropdown-padding: var(--neo-space-2);  /* 8px */
+
+  /* Table spacing */
+  --neo-space-table-cell-padding-x: var(--neo-space-3);  /* 12px */
+  --neo-space-table-cell-padding-y: var(--neo-space-2);  /* 8px */
+  --neo-space-table-header-padding-x: var(--neo-space-3); /* 12px */
+  --neo-space-table-header-padding-y: var(--neo-space-3); /* 12px */
+
+  /* Alert spacing */
+  --neo-space-alert-padding: var(--neo-space-4);         /* 16px */
+  --neo-space-alert-icon-gap: var(--neo-space-3);        /* 12px */
+
+  /* Badge spacing */
+  --neo-space-badge-padding-x: var(--neo-space-2);       /* 8px */
+  --neo-space-badge-padding-y: var(--neo-space-0-5);     /* 2px */
+
+  /* ==========================================================================
+     RESPONSIVE SPACING MODIFIERS
+     ========================================================================== */
+  
+  /* These will be used by responsive utilities */
+  --neo-space-responsive-sm: 0.875;  /* 87.5% of base spacing on small screens */
+  --neo-space-responsive-md: 1;      /* 100% of base spacing on medium screens */
+  --neo-space-responsive-lg: 1.125;  /* 112.5% of base spacing on large screens */
+  --neo-space-responsive-xl: 1.25;   /* 125% of base spacing on extra large screens */
+
+  /* ==========================================================================
+     NEGATIVE SPACING
+     ========================================================================== */
+  
+  /* Negative margins for overlapping elements */
+  --neo-space-negative-1: calc(-1 * var(--neo-space-1));
+  --neo-space-negative-2: calc(-1 * var(--neo-space-2));
+  --neo-space-negative-3: calc(-1 * var(--neo-space-3));
+  --neo-space-negative-4: calc(-1 * var(--neo-space-4));
+  --neo-space-negative-5: calc(-1 * var(--neo-space-5));
+  --neo-space-negative-6: calc(-1 * var(--neo-space-6));
+  --neo-space-negative-8: calc(-1 * var(--neo-space-8));
+  --neo-space-negative-10: calc(-1 * var(--neo-space-10));
+  --neo-space-negative-12: calc(-1 * var(--neo-space-12));
+  --neo-space-negative-16: calc(-1 * var(--neo-space-16));
+}

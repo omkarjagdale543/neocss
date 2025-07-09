@@ -1,0 +1,184 @@
+/**
+ * NeoCSS Typography Design Tokens
+ * 
+ * YAML Metadata:
+ * prompt: Design token system development
+ * purpose: Define typography scale, font families, and text properties
+ * created: 2025-07-08
+ * features: modular scale, font stacks, line heights, letter spacing
+ */
+
+:root {
+  /* ==========================================================================
+     FONT FAMILIES
+     ========================================================================== */
+  
+  /* System font stacks for optimal performance and consistency */
+  --neo-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --neo-font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --neo-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Semantic aliases */
+  --neo-font-family-base: var(--neo-font-family-sans);
+  --neo-font-family-heading: var(--neo-font-family-sans);
+  --neo-font-family-code: var(--neo-font-family-mono);
+
+  /* ==========================================================================
+     FONT SIZES (Modular Scale)
+     ========================================================================== */
+  
+  /* Base font size */
+  --neo-font-size-base: 1rem;        /* 16px */
+  
+  /* Font size scale */
+  --neo-font-size-xs: 0.75rem;       /* 12px */
+  --neo-font-size-sm: 0.875rem;      /* 14px */
+  --neo-font-size-md: 1rem;          /* 16px */
+  --neo-font-size-lg: 1.125rem;      /* 18px */
+  --neo-font-size-xl: 1.25rem;       /* 20px */
+  --neo-font-size-2xl: 1.5rem;       /* 24px */
+  --neo-font-size-3xl: 1.875rem;     /* 30px */
+  --neo-font-size-4xl: 2.25rem;      /* 36px */
+  --neo-font-size-5xl: 3rem;         /* 48px */
+  --neo-font-size-6xl: 3.75rem;      /* 60px */
+  --neo-font-size-7xl: 4.5rem;       /* 72px */
+  --neo-font-size-8xl: 6rem;         /* 96px */
+  --neo-font-size-9xl: 8rem;         /* 128px */
+
+  /* ==========================================================================
+     FONT WEIGHTS
+     ========================================================================== */
+  
+  --neo-font-weight-thin: 100;
+  --neo-font-weight-extralight: 200;
+  --neo-font-weight-light: 300;
+  --neo-font-weight-normal: 400;
+  --neo-font-weight-medium: 500;
+  --neo-font-weight-semibold: 600;
+  --neo-font-weight-bold: 700;
+  --neo-font-weight-extrabold: 800;
+  --neo-font-weight-black: 900;
+
+  /* Semantic aliases */
+  --neo-font-weight-base: var(--neo-font-weight-normal);
+  --neo-font-weight-heading: var(--neo-font-weight-semibold);
+  --neo-font-weight-strong: var(--neo-font-weight-bold);
+
+  /* ==========================================================================
+     LINE HEIGHTS
+     ========================================================================== */
+  
+  --neo-line-height-none: 1;
+  --neo-line-height-tight: 1.25;
+  --neo-line-height-snug: 1.375;
+  --neo-line-height-normal: 1.5;
+  --neo-line-height-relaxed: 1.625;
+  --neo-line-height-loose: 2;
+
+  /* Semantic aliases */
+  --neo-line-height-base: var(--neo-line-height-normal);
+  --neo-line-height-heading: var(--neo-line-height-tight);
+
+  /* ==========================================================================
+     LETTER SPACING
+     ========================================================================== */
+  
+  --neo-letter-spacing-tighter: -0.05em;
+  --neo-letter-spacing-tight: -0.025em;
+  --neo-letter-spacing-normal: 0em;
+  --neo-letter-spacing-wide: 0.025em;
+  --neo-letter-spacing-wider: 0.05em;
+  --neo-letter-spacing-widest: 0.1em;
+
+  /* ==========================================================================
+     HEADING SCALE
+     ========================================================================== */
+  
+  /* H1 */
+  --neo-heading-h1-font-size: var(--neo-font-size-4xl);
+  --neo-heading-h1-line-height: var(--neo-line-height-tight);
+  --neo-heading-h1-font-weight: var(--neo-font-weight-bold);
+  --neo-heading-h1-letter-spacing: var(--neo-letter-spacing-tight);
+
+  /* H2 */
+  --neo-heading-h2-font-size: var(--neo-font-size-3xl);
+  --neo-heading-h2-line-height: var(--neo-line-height-tight);
+  --neo-heading-h2-font-weight: var(--neo-font-weight-semibold);
+  --neo-heading-h2-letter-spacing: var(--neo-letter-spacing-tight);
+
+  /* H3 */
+  --neo-heading-h3-font-size: var(--neo-font-size-2xl);
+  --neo-heading-h3-line-height: var(--neo-line-height-snug);
+  --neo-heading-h3-font-weight: var(--neo-font-weight-semibold);
+  --neo-heading-h3-letter-spacing: var(--neo-letter-spacing-normal);
+
+  /* H4 */
+  --neo-heading-h4-font-size: var(--neo-font-size-xl);
+  --neo-heading-h4-line-height: var(--neo-line-height-snug);
+  --neo-heading-h4-font-weight: var(--neo-font-weight-semibold);
+  --neo-heading-h4-letter-spacing: var(--neo-letter-spacing-normal);
+
+  /* H5 */
+  --neo-heading-h5-font-size: var(--neo-font-size-lg);
+  --neo-heading-h5-line-height: var(--neo-line-height-normal);
+  --neo-heading-h5-font-weight: var(--neo-font-weight-medium);
+  --neo-heading-h5-letter-spacing: var(--neo-letter-spacing-normal);
+
+  /* H6 */
+  --neo-heading-h6-font-size: var(--neo-font-size-md);
+  --neo-heading-h6-line-height: var(--neo-line-height-normal);
+  --neo-heading-h6-font-weight: var(--neo-font-weight-medium);
+  --neo-heading-h6-letter-spacing: var(--neo-letter-spacing-normal);
+
+  /* ==========================================================================
+     COMPONENT TYPOGRAPHY
+     ========================================================================== */
+  
+  /* Button typography */
+  --neo-button-font-family: var(--neo-font-family-base);
+  --neo-button-font-weight: var(--neo-font-weight-medium);
+  --neo-button-letter-spacing: var(--neo-letter-spacing-wide);
+  --neo-button-text-transform: none;
+
+  --neo-button-sm-font-size: var(--neo-font-size-sm);
+  --neo-button-md-font-size: var(--neo-font-size-md);
+  --neo-button-lg-font-size: var(--neo-font-size-lg);
+
+  /* Form typography */
+  --neo-label-font-size: var(--neo-font-size-sm);
+  --neo-label-font-weight: var(--neo-font-weight-medium);
+  --neo-label-line-height: var(--neo-line-height-normal);
+
+  --neo-input-font-family: var(--neo-font-family-base);
+  --neo-input-font-size: var(--neo-font-size-md);
+  --neo-input-line-height: var(--neo-line-height-normal);
+
+  --neo-help-text-font-size: var(--neo-font-size-sm);
+  --neo-help-text-line-height: var(--neo-line-height-normal);
+
+  /* Link typography */
+  --neo-link-font-weight: var(--neo-font-weight-medium);
+  --neo-link-text-decoration: underline;
+  --neo-link-text-decoration-thickness: 1px;
+  --neo-link-text-underline-offset: 2px;
+
+  /* Code typography */
+  --neo-code-font-family: var(--neo-font-family-mono);
+  --neo-code-font-size: 0.875em;
+  --neo-code-line-height: var(--neo-line-height-normal);
+
+  /* Table typography */
+  --neo-table-header-font-weight: var(--neo-font-weight-semibold);
+  --neo-table-header-font-size: var(--neo-font-size-sm);
+  --neo-table-cell-font-size: var(--neo-font-size-sm);
+
+  /* ==========================================================================
+     RESPONSIVE TYPOGRAPHY
+     ========================================================================== */
+  
+  /* Responsive font size multipliers */
+  --neo-font-scale-sm: 0.875;   /* 87.5% on small screens */
+  --neo-font-scale-md: 1;       /* 100% on medium screens */
+  --neo-font-scale-lg: 1.125;   /* 112.5% on large screens */
+  --neo-font-scale-xl: 1.25;    /* 125% on extra large screens */
+}

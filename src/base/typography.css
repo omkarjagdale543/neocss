@@ -1,0 +1,379 @@
+/**
+ * NeoCSS Base Typography
+ * 
+ * YAML Metadata:
+ * prompt: Complete remaining utility classes for global compatibility
+ * purpose: Base typography styles for headings, paragraphs, and text elements
+ * created: 2025-07-08
+ * features: semantic headings, responsive typography, accessibility
+ */
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1 {
+  font-size: var(--neo-heading-h1-font-size);
+  line-height: var(--neo-heading-h1-line-height);
+  font-weight: var(--neo-heading-h1-font-weight);
+  letter-spacing: var(--neo-heading-h1-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-6);
+}
+
+h2 {
+  font-size: var(--neo-heading-h2-font-size);
+  line-height: var(--neo-heading-h2-line-height);
+  font-weight: var(--neo-heading-h2-font-weight);
+  letter-spacing: var(--neo-heading-h2-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-5);
+}
+
+h3 {
+  font-size: var(--neo-heading-h3-font-size);
+  line-height: var(--neo-heading-h3-line-height);
+  font-weight: var(--neo-heading-h3-font-weight);
+  letter-spacing: var(--neo-heading-h3-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-4);
+}
+
+h4 {
+  font-size: var(--neo-heading-h4-font-size);
+  line-height: var(--neo-heading-h4-line-height);
+  font-weight: var(--neo-heading-h4-font-weight);
+  letter-spacing: var(--neo-heading-h4-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-3);
+}
+
+h5 {
+  font-size: var(--neo-heading-h5-font-size);
+  line-height: var(--neo-heading-h5-line-height);
+  font-weight: var(--neo-heading-h5-font-weight);
+  letter-spacing: var(--neo-heading-h5-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-2);
+}
+
+h6 {
+  font-size: var(--neo-heading-h6-font-size);
+  line-height: var(--neo-heading-h6-line-height);
+  font-weight: var(--neo-heading-h6-font-weight);
+  letter-spacing: var(--neo-heading-h6-letter-spacing);
+  font-family: var(--neo-font-family-heading);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-2);
+}
+
+/* ==========================================================================
+   PARAGRAPHS AND TEXT
+   ========================================================================== */
+
+p {
+  font-size: var(--neo-font-size-base);
+  line-height: var(--neo-line-height-base);
+  font-weight: var(--neo-font-weight-base);
+  font-family: var(--neo-font-family-base);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a {
+  color: var(--neo-color-link);
+  text-decoration: var(--neo-link-text-decoration);
+  text-decoration-thickness: var(--neo-link-text-decoration-thickness);
+  text-underline-offset: var(--neo-link-text-underline-offset);
+  font-weight: var(--neo-link-font-weight);
+  transition: var(--neo-transition-colors);
+}
+
+a:hover {
+  color: var(--neo-color-link-hover);
+}
+
+a:visited {
+  color: var(--neo-color-link-visited);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--neo-color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--neo-border-radius-sm);
+}
+
+/* ==========================================================================
+   EMPHASIS AND STRONG
+   ========================================================================== */
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: var(--neo-font-weight-strong);
+  color: var(--neo-color-text-primary);
+}
+
+/* ==========================================================================
+   SMALL TEXT
+   ========================================================================== */
+
+small {
+  font-size: var(--neo-font-size-sm);
+  color: var(--neo-color-text-secondary);
+}
+
+/* ==========================================================================
+   CODE AND PREFORMATTED TEXT
+   ========================================================================== */
+
+code {
+  font-family: var(--neo-code-font-family);
+  font-size: var(--neo-code-font-size);
+  line-height: var(--neo-code-line-height);
+  background-color: var(--neo-color-neutral-100);
+  color: var(--neo-color-text-primary);
+  padding: var(--neo-space-0-5) var(--neo-space-1);
+  border-radius: var(--neo-border-radius-sm);
+  border: 1px solid var(--neo-color-border-secondary);
+}
+
+pre {
+  font-family: var(--neo-code-font-family);
+  font-size: var(--neo-code-font-size);
+  line-height: var(--neo-code-line-height);
+  background-color: var(--neo-color-neutral-100);
+  color: var(--neo-color-text-primary);
+  padding: var(--neo-space-4);
+  border-radius: var(--neo-border-radius-md);
+  border: 1px solid var(--neo-color-border-secondary);
+  overflow-x: auto;
+  margin-bottom: var(--neo-space-4);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ==========================================================================
+   BLOCKQUOTES
+   ========================================================================== */
+
+blockquote {
+  border-left: 4px solid var(--neo-color-primary-500);
+  padding-left: var(--neo-space-4);
+  margin: var(--neo-space-6) 0;
+  font-style: italic;
+  color: var(--neo-color-text-secondary);
+}
+
+blockquote p {
+  margin-bottom: var(--neo-space-2);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+cite {
+  font-style: normal;
+  font-size: var(--neo-font-size-sm);
+  color: var(--neo-color-text-tertiary);
+}
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+ul,
+ol {
+  margin-bottom: var(--neo-space-4);
+  padding-left: var(--neo-space-6);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: var(--neo-space-1);
+  line-height: var(--neo-line-height-base);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Nested lists */
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: var(--neo-space-1);
+  margin-bottom: var(--neo-space-1);
+}
+
+/* Description lists */
+dl {
+  margin-bottom: var(--neo-space-4);
+}
+
+dt {
+  font-weight: var(--neo-font-weight-semibold);
+  color: var(--neo-color-text-primary);
+  margin-bottom: var(--neo-space-1);
+}
+
+dd {
+  margin-left: var(--neo-space-4);
+  margin-bottom: var(--neo-space-2);
+  color: var(--neo-color-text-secondary);
+}
+
+dd:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--neo-color-border-primary);
+  margin: var(--neo-space-8) 0;
+}
+
+/* ==========================================================================
+   ABBREVIATIONS
+   ========================================================================== */
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   MARK AND HIGHLIGHTING
+   ========================================================================== */
+
+mark {
+  background-color: var(--neo-color-warning-200);
+  color: var(--neo-color-warning-900);
+  padding: var(--neo-space-0-5) var(--neo-space-1);
+  border-radius: var(--neo-border-radius-sm);
+}
+
+/* ==========================================================================
+   SUBSCRIPT AND SUPERSCRIPT
+   ========================================================================== */
+
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* ==========================================================================
+   KEYBOARD INPUT
+   ========================================================================== */
+
+kbd {
+  font-family: var(--neo-code-font-family);
+  font-size: var(--neo-font-size-sm);
+  background-color: var(--neo-color-neutral-800);
+  color: var(--neo-color-neutral-100);
+  padding: var(--neo-space-0-5) var(--neo-space-1);
+  border-radius: var(--neo-border-radius-sm);
+  border: 1px solid var(--neo-color-neutral-600);
+  box-shadow: 0 1px 0 var(--neo-color-neutral-600);
+}
+
+/* ==========================================================================
+   SAMPLE OUTPUT
+   ========================================================================== */
+
+samp {
+  font-family: var(--neo-code-font-family);
+  font-size: var(--neo-code-font-size);
+  background-color: var(--neo-color-neutral-100);
+  color: var(--neo-color-text-primary);
+  padding: var(--neo-space-0-5) var(--neo-space-1);
+  border-radius: var(--neo-border-radius-sm);
+}
+
+/* ==========================================================================
+   VARIABLE
+   ========================================================================== */
+
+var {
+  font-family: var(--neo-code-font-family);
+  font-style: italic;
+  font-weight: var(--neo-font-weight-medium);
+}
+
+/* ==========================================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: calc(var(--neo-heading-h1-font-size) * var(--neo-font-scale-sm));
+  }
+  
+  h2 {
+    font-size: calc(var(--neo-heading-h2-font-size) * var(--neo-font-scale-sm));
+  }
+  
+  h3 {
+    font-size: calc(var(--neo-heading-h3-font-size) * var(--neo-font-scale-sm));
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: calc(var(--neo-heading-h1-font-size) * var(--neo-font-scale-lg));
+  }
+  
+  h2 {
+    font-size: calc(var(--neo-heading-h2-font-size) * var(--neo-font-scale-lg));
+  }
+  
+  h3 {
+    font-size: calc(var(--neo-heading-h3-font-size) * var(--neo-font-scale-lg));
+  }
+}

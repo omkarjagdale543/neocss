@@ -1,0 +1,89 @@
+{
+  "name": "neocss",
+  "version": "1.0.0",
+  "description": "A utility-first + component-rich hybrid CSS framework",
+  "main": "dist/neocss.css",
+  "module": "dist/neocss.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss src/neocss.css -o dist/neocss.css",
+    "build:css:min": "postcss src/neocss.css -o dist/neocss.min.css --env production",
+    "build:js": "rollup -c",
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",
+    "watch:css": "postcss src/neocss.css -o dist/neocss.css --watch",
+    "serve": "live-server --port=3000 --open=examples/",
+    "test": "jest",
+    "lint": "stylelint src/**/*.css",
+    "format": "prettier --write src/**/*.{css,js,ts}",
+    "purge": "purgecss --config purgecss.config.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "cli": "node cli/index.js"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "utility-first",
+    "components",
+    "design-system",
+    "postcss",
+    "tailwind",
+    "bootstrap",
+    "responsive",
+    "dark-mode",
+    "accessibility"
+  ],
+  "author": "NeoCSS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neocss/neocss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neocss/neocss/issues"
+  },
+  "homepage": "https://neocss.dev",
+  "devDependencies": {
+    "@purgecss/postcss": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/jest": "^29.0.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^7.6.0",
+    "cssnano": "^6.0.0",
+    "jest": "^29.0.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.0",
+    "postcss-preset-env": "^8.0.0",
+    "prettier": "^2.8.0",
+    "purgecss": "^5.0.0",
+    "rollup": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^30.0.0",
+    "typescript": "^4.9.0",
+    "vitepress": "^1.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  }
+}
