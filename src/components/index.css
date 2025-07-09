@@ -1,0 +1,30 @@
+/**
+ * NeoCSS Components Index
+ * 
+ * YAML Metadata:
+ * prompt: Build optimization and tooling development
+ * purpose: Components-only bundle for component-focused builds
+ * created: 2025-07-08
+ * features: modular component imports, tree-shaking ready
+ */
+
+/* Import design tokens */
+@import '../tokens/colors.css';
+@import '../tokens/spacing.css';
+@import '../tokens/typography.css';
+@import '../tokens/shadows.css';
+@import '../tokens/borders.css';
+@import '../tokens/animations.css';
+
+/* Import base styles */
+@import '../base/reset.css';
+@import '../base/typography.css';
+
+/* Import all components */
+@import './buttons.css';
+@import './cards.css';
+@import './forms.css';
+@import './modals.css';
+@import './navigation.css';
+@import './alerts.css';
+@import './dropdowns.css';

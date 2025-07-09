@@ -1,0 +1,17 @@
+{
+  "name": "neocss-project",
+  "version": "1.0.0",
+  "description": "A NeoCSS project",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "neocss build",
+    "optimize": "neocss optimize dist/styles.css"
+  },
+  "dependencies": {
+    "neocss": "^1.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

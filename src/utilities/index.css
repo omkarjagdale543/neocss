@@ -1,0 +1,36 @@
+/**
+ * NeoCSS Utilities Index
+ * 
+ * YAML Metadata:
+ * prompt: Build optimization and tooling development
+ * purpose: Utilities-only bundle for minimal builds
+ * created: 2025-07-08
+ * features: modular utility imports, tree-shaking ready
+ */
+
+/* Import design tokens */
+@import '../tokens/colors.css';
+@import '../tokens/spacing.css';
+@import '../tokens/typography.css';
+@import '../tokens/shadows.css';
+@import '../tokens/borders.css';
+@import '../tokens/animations.css';
+
+/* Import base styles */
+@import '../base/reset.css';
+@import '../base/typography.css';
+
+/* Import all utilities */
+@import './spacing.css';
+@import './layout.css';
+@import './flexbox.css';
+@import './grid.css';
+@import './typography.css';
+@import './colors.css';
+@import './borders.css';
+@import './effects.css';
+@import './transforms.css';
+@import './transitions.css';
+@import './responsive.css';
+@import './states.css';
+@import './rtl.css';

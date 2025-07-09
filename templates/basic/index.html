@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCSS Project</title>
+    <link rel="stylesheet" href="node_modules/neocss/dist/neocss.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background-primary text-text-primary">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-surface-raised shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">NeoCSS Project</a>
+            <button class="navbar-toggler" type="button" data-neo-toggle="collapse" data-neo-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
+        <div class="container text-center">
+            <h1 class="text-5xl font-bold mb-6">Welcome to NeoCSS</h1>
+            <p class="text-xl mb-8 opacity-90">A modern, utility-first CSS framework with component-rich design</p>
+            <div class="flex gap-4 justify-center">
+                <button class="btn btn-primary btn-lg" data-neo-button data-neo-ripple="true">
+                    Get Started
+                </button>
+                <button class="btn btn-outline-primary btn-lg" data-neo-button>
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Why Choose NeoCSS?</h2>
+                <p class="text-lg text-text-secondary">Modern CSS framework with the best of both worlds</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Utility-First</h3>
+                    <p class="text-text-secondary">Build anything with low-level utility classes that give you complete control.</p>
+                </div>
+                
+                <div class="card card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🧩</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Component-Rich</h3>
+                    <p class="text-text-secondary">Pre-built components for rapid development without sacrificing flexibility.</p>
+                </div>
+                
+                <div class="card card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">♿</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Accessible</h3>
+                    <p class="text-text-secondary">Built with accessibility in mind, WCAG 2.1 AA compliant out of the box.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Components -->
+    <section class="py-16 bg-surface-secondary">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center mb-12">Example Components</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Alert Example -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Alerts</h3>
+                    <div class="space-y-4">
+                        <div class="alert alert-success" role="alert">
+                            <strong>Success!</strong> Your action was completed successfully.
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            <strong>Warning!</strong> Please check your input.
+                        </div>
+                        <div class="alert alert-error alert-dismissible" role="alert">
+                            <strong>Error!</strong> Something went wrong.
+                            <button type="button" class="alert-dismiss" data-neo-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Example -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Forms</h3>
+                    <form class="space-y-4">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember">
+                            <label class="form-check-label" for="remember">
+                                Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-neo-button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-neutral-800 text-neutral-200">
+        <div class="container text-center">
+            <p>&copy; 2025 NeoCSS Project. Built with NeoCSS Framework.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Example -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" data-neo-modal>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal Example</h5>
+                    <button type="button" class="modal-close" data-neo-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This is an example modal built with NeoCSS.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-neo-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/neocss/dist/neocss.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

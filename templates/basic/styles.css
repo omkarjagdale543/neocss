@@ -1,0 +1,51 @@
+/**
+ * Custom styles for your NeoCSS project
+ * 
+ * You can add your custom styles here or use NeoCSS utilities
+ * throughout your HTML for rapid development.
+ */
+
+/* Custom component example */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--neo-color-primary-500) 0%, var(--neo-color-secondary-500) 100%);
+}
+
+/* Custom utility example */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive custom styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Dark mode custom styles */
+@media (prefers-color-scheme: dark) {
+  .custom-card {
+    background-color: var(--neo-color-neutral-800);
+    border-color: var(--neo-color-neutral-700);
+  }
+}
+
+/* Animation examples */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -25,8 +25,31 @@ A modern utility-first + component-rich hybrid CSS framework that combines the f
 
 ## 📦 Installation
 
+### NPM Package
+
 ```bash
 npm install neocss
+```
+
+### CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neocss@latest/dist/neocss.css">
+<script src="https://cdn.jsdelivr.net/npm/neocss@latest/dist/neocss.umd.js"></script>
+```
+
+### CLI Tool
+
+```bash
+# Install globally
+npm install -g neocss
+
+# Create new project
+neocss init my-project
+
+# Build and optimize
+neocss build
+neocss optimize styles.css
 ```
 
 ## 🏃‍♂️ Quick Start
@@ -157,7 +180,60 @@ Customize the framework using CSS variables:
 }
 ```
 
-## 📚 Documentation
+## � CLI Tools
+
+NeoCSS includes a powerful CLI for project management and optimization:
+
+### Project Initialization
+
+```bash
+# Create new project with template
+neocss init my-project --template basic
+neocss init my-app --template react
+neocss init my-site --template vue
+```
+
+### Build and Optimization
+
+```bash
+# Build for production
+neocss build --output dist
+
+# Watch for changes
+neocss build --watch
+
+# Optimize CSS (remove unused styles)
+neocss optimize styles.css --purge "src/**/*.html"
+
+# Analyze bundle size
+neocss analyze dist/styles.css --json
+```
+
+### Component Generation
+
+```bash
+# Generate new component
+neocss generate component my-component
+neocss g utility my-utility
+```
+
+## 📊 Performance
+
+### Bundle Sizes (Gzipped)
+
+- **Full Framework**: ~50KB
+- **Utilities Only**: ~30KB
+- **Components Only**: ~25KB
+- **Individual Components**: ~2-5KB each
+
+### Optimization Features
+
+- **Tree Shaking**: Remove unused CSS automatically
+- **PurgeCSS**: Eliminate unused styles in production
+- **CSS Minification**: Optimized output for production
+- **Modular Loading**: Import only what you need
+
+## �📚 Documentation
 
 - [Getting Started](./docs/getting-started.md)
 - [Utility Classes](./docs/utilities.md)

@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "dist/neocss.css",
+      "maxSize": "150kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss.min.css",
+      "maxSize": "50kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss-utilities.css",
+      "maxSize": "80kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss-utilities.min.css",
+      "maxSize": "30kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss-components.css",
+      "maxSize": "70kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss-components.min.css",
+      "maxSize": "25kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss.umd.js",
+      "maxSize": "20kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss.umd.min.js",
+      "maxSize": "10kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss.esm.js",
+      "maxSize": "20kb",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/neocss.esm.min.js",
+      "maxSize": "10kb",
+      "compression": "gzip"
+    }
+  ]
+}
